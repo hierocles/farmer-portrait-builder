@@ -1094,6 +1094,32 @@ code {
   font-size: 0.72rem;
 }
 
+.copy-slot-dialog__presets {
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+  padding-bottom: 0.35rem;
+  border-bottom: 1px dashed var(--sdv-panel-edge);
+}
+
+.copy-slot-dialog__preset {
+  width: 100%;
+  font-size: 0.68rem;
+  padding: 0.4rem 0.55rem;
+  text-align: left;
+}
+
+.copy-slot-dialog__preset-hint {
+  margin: 0;
+  font-size: 0.62rem;
+  color: var(--sdv-ink-muted);
+  line-height: 1.35;
+}
+
+.copy-slot-dialog__option--similar code {
+  color: var(--sdv-green-dark);
+}
+
 .copy-slot-dialog__field-header {
   display: flex;
   align-items: center;

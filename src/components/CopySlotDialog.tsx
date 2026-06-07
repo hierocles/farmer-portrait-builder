@@ -2,6 +2,12 @@ import { useEffect, useMemo, useState } from 'react'
 
 import { slotKey } from '../lib/types'
 
+import {
+  findSimilarSeasonWeatherIndoorTargets,
+  findSimilarWeatherSlotTargets,
+  findSimilarWeatherSlotTargetsAllSeasons,
+} from '../lib/weatherFamilies'
+
 import { getVisibleCopyTargetGroups, usePortraitStore } from '../store/portraitStore'
 
 interface CopySlotDialogProps {
@@ -32,6 +38,35 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
     () => targetGroups.flatMap((group) => group.sections.flatMap((section) => section.targets)),
     [targetGroups],
   )
+
+  const similarWeatherSelection = useMemo(
+    () => findSimilarWeatherSlotTargets(folderPath, filename, targets),
+    [folderPath, filename, targets],
+  )
+
+  const similarWeatherAllSeasonsSelection = useMemo(
+    () => findSimilarWeatherSlotTargetsAllSeasons(folderPath, filename, targets),
+    [folderPath, filename, targets],
+  )
+
+  const similarIndoorSelection = useMemo(
+    () => findSimilarSeasonWeatherIndoorTargets(folderPath, filename, targets),
+    [folderPath, filename, targets],
+  )
+
+  const similarWeatherKeys = useMemo(() => {
+    const keys = new Set<string>()
+    for (const selection of [
+      similarWeatherSelection,
+      similarWeatherAllSeasonsSelection,
+      similarIndoorSelection,
+    ]) {
+      for (const target of selection?.targets ?? []) {
+        keys.add(target.key)
+      }
+    }
+    return keys
+  }, [similarWeatherSelection, similarWeatherAllSeasonsSelection, similarIndoorSelection])
 
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(() => new Set())
   const [copying, setCopying] = useState(false)
@@ -132,6 +167,66 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
           <p className="copy-slot-dialog__empty">No other visible slots to copy to.</p>
         ) : (
           <div className="copy-slot-dialog__field">
+            {(similarWeatherSelection ||
+              similarWeatherAllSeasonsSelection ||
+              similarIndoorSelection) && (
+              <div className="copy-slot-dialog__presets">
+                {similarWeatherSelection && (
+                  <button
+                    type="button"
+                    className="btn-secondary copy-slot-dialog__preset"
+                    disabled={copying}
+                    onClick={() =>
+                      selectKeys(similarWeatherSelection.targets.map((target) => target.key))
+                    }>
+                    Select similar {similarWeatherSelection.season}{' '}
+                    {similarWeatherSelection.familyLabel} weathers (
+                    {similarWeatherSelection.targets.length})
+                  </button>
+                )}
+
+                {similarWeatherAllSeasonsSelection && (
+                  <button
+                    type="button"
+                    className="btn-secondary copy-slot-dialog__preset"
+                    disabled={copying}
+                    onClick={() =>
+                      selectKeys(
+                        similarWeatherAllSeasonsSelection.targets.map((target) => target.key),
+                      )
+                    }>
+                    Select similar {similarWeatherAllSeasonsSelection.familyLabel} weathers, all
+                    seasons ({similarWeatherAllSeasonsSelection.targets.length})
+                  </button>
+                )}
+
+                {similarIndoorSelection && (
+                  <button
+                    type="button"
+                    className="btn-secondary copy-slot-dialog__preset"
+                    disabled={copying}
+                    onClick={() =>
+                      selectKeys(similarIndoorSelection.targets.map((target) => target.key))
+                    }>
+                    Select similar {similarIndoorSelection.season}{' '}
+                    {similarIndoorSelection.familyLabel} indoor slots (
+                    {similarIndoorSelection.targets.length})
+                  </button>
+                )}
+
+                <p className="copy-slot-dialog__preset-hint">
+                  Weather presets match across Seasons &amp; Weather, Weather Wonders, and Danger
+                  Weather when those groups are enabled.
+                  {similarIndoorSelection ? (
+                    <>
+                      {' '}
+                      Indoor preset targets <code>{similarIndoorSelection.targetFilename}</code>.
+                    </>
+                  ) : null}
+                </p>
+              </div>
+            )}
+
             <div className="copy-slot-dialog__field-header">
               <span>Copy to</span>
               <div className="copy-slot-dialog__selection-actions">
@@ -187,7 +282,9 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
                         </legend>
 
                         {section.targets.map((target) => (
-                          <label key={target.key} className="copy-slot-dialog__option">
+                          <label
+                            key={target.key}
+                            className={`copy-slot-dialog__option${similarWeatherKeys.has(target.key) ? ' copy-slot-dialog__option--similar' : ''}`}>
                             <input
                               type="checkbox"
                               checked={selectedKeys.has(target.key)}

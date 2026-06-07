@@ -8,7 +8,7 @@ Upload your emotion portraits, drag them into scenario slots, and export a ready
 
 - **Drag-and-drop assignment** — upload default emotion portraits, then drag them onto scenario slots
 - **Per-slot uploads** — override individual slots with custom PNGs
-- **Copy custom portraits** — duplicate a custom upload to one or more scenario slots without re-uploading
+- **Copy custom portraits** — duplicate a custom upload to one or more scenario slots without re-uploading; seasonal weather slots include quick-select presets for similar weathers (same season or all seasons) and matching indoor slots
 - **Scenario groups** — base portraits, seasons & weather, festivals, and optional advanced groups (mining, pajamas, Weather Wonders, Danger Weather, and more)
 - **Configurable options** — extended emotions, indoor seasonal variants, and optional 64×64 resize on export
 - **Bulk actions** — fill all visible slots from defaults, clear all assignments

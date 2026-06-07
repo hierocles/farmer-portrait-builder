@@ -163,6 +163,21 @@ export function extendedIndoorFilename(emotionKey: EmotionKey, baseFilename: str
   return baseFilename.replace(/\.png$/i, '_indoors.png')
 }
 
+/** Map an outdoor portrait filename to its indoor counterpart, or return indoor input unchanged. */
+export function resolveIndoorCounterpartFilename(filename: string): string | null {
+  if (isIndoorFilename(filename)) return filename
+
+  const emotion = emotionFromFilename(filename)
+  if (!emotion) return null
+  if (emotion === 'neutral') return 'portrait_indoors.png'
+
+  const allEmotions = [...CORE_EMOTIONS, ...EXTENDED_EMOTIONS]
+  const entry = allEmotions.find((item) => item.key === emotion)
+  if (!entry) return null
+
+  return extendedIndoorFilename(emotion, entry.baseFilename)
+}
+
 export function scenarioSupportsIndoor(scenario: Scenario): boolean {
   return scenario.hasIndoor || scenario.files.some(isIndoorFilename)
 }
