@@ -1,6 +1,6 @@
 import { useEffect, useMemo, useState } from 'react'
 
-import { slotKey } from '../lib/types'
+import { slotKey, isIndoorFilename } from '../lib/types'
 
 import {
   findSimilarSeasonWeatherIndoorTargets,
@@ -49,24 +49,25 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
     [folderPath, filename, targets],
   )
 
-  const similarIndoorSelection = useMemo(
-    () => findSimilarSeasonWeatherIndoorTargets(folderPath, filename, targets),
-    [folderPath, filename, targets],
-  )
+  const similarIndoorSelection = useMemo(() => {
+    if (isIndoorFilename(filename)) return null
+    return findSimilarSeasonWeatherIndoorTargets(folderPath, filename, targets)
+  }, [folderPath, filename, targets])
 
   const similarWeatherKeys = useMemo(() => {
     const keys = new Set<string>()
-    for (const selection of [
-      similarWeatherSelection,
-      similarWeatherAllSeasonsSelection,
-      similarIndoorSelection,
-    ]) {
+    for (const selection of [similarWeatherSelection, similarWeatherAllSeasonsSelection]) {
       for (const target of selection?.targets ?? []) {
         keys.add(target.key)
       }
     }
     return keys
-  }, [similarWeatherSelection, similarWeatherAllSeasonsSelection, similarIndoorSelection])
+  }, [similarWeatherSelection, similarWeatherAllSeasonsSelection])
+
+  const similarIndoorKeys = useMemo(
+    () => new Set(similarIndoorSelection?.targets.map((target) => target.key) ?? []),
+    [similarIndoorSelection],
+  )
 
   const [selectedKeys, setSelectedKeys] = useState<Set<string>>(() => new Set())
   const [copying, setCopying] = useState(false)
@@ -94,6 +95,10 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
 
   const selectKeys = (keys: string[]) => {
     setSelectedKeys((current) => mergeSelection(current, keys, true))
+  }
+
+  const replaceSelection = (keys: string[]) => {
+    setSelectedKeys(new Set(keys))
   }
 
   const clearKeys = (keys: string[]) => {
@@ -177,10 +182,11 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
                     className="btn-secondary copy-slot-dialog__preset"
                     disabled={copying}
                     onClick={() =>
-                      selectKeys(similarWeatherSelection.targets.map((target) => target.key))
+                      replaceSelection(similarWeatherSelection.targets.map((target) => target.key))
                     }>
                     Select similar {similarWeatherSelection.season}{' '}
-                    {similarWeatherSelection.familyLabel} weathers (
+                    {similarWeatherSelection.familyLabel} weathers —{' '}
+                    <code>{similarWeatherSelection.targetFilename}</code> (
                     {similarWeatherSelection.targets.length})
                   </button>
                 )}
@@ -191,25 +197,27 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
                     className="btn-secondary copy-slot-dialog__preset"
                     disabled={copying}
                     onClick={() =>
-                      selectKeys(
+                      replaceSelection(
                         similarWeatherAllSeasonsSelection.targets.map((target) => target.key),
                       )
                     }>
                     Select similar {similarWeatherAllSeasonsSelection.familyLabel} weathers, all
-                    seasons ({similarWeatherAllSeasonsSelection.targets.length})
+                    seasons — <code>{similarWeatherAllSeasonsSelection.targetFilename}</code> (
+                    {similarWeatherAllSeasonsSelection.targets.length})
                   </button>
                 )}
 
                 {similarIndoorSelection && (
                   <button
                     type="button"
-                    className="btn-secondary copy-slot-dialog__preset"
+                    className="btn-secondary copy-slot-dialog__preset copy-slot-dialog__preset--indoor"
                     disabled={copying}
                     onClick={() =>
-                      selectKeys(similarIndoorSelection.targets.map((target) => target.key))
+                      replaceSelection(similarIndoorSelection.targets.map((target) => target.key))
                     }>
                     Select similar {similarIndoorSelection.season}{' '}
-                    {similarIndoorSelection.familyLabel} indoor slots (
+                    {similarIndoorSelection.familyLabel} indoor slots —{' '}
+                    <code>{similarIndoorSelection.targetFilename}</code> (
                     {similarIndoorSelection.targets.length})
                   </button>
                 )}
@@ -284,7 +292,13 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
                         {section.targets.map((target) => (
                           <label
                             key={target.key}
-                            className={`copy-slot-dialog__option${similarWeatherKeys.has(target.key) ? ' copy-slot-dialog__option--similar' : ''}`}>
+                            className={`copy-slot-dialog__option${
+                              similarWeatherKeys.has(target.key)
+                                ? ' copy-slot-dialog__option--similar'
+                                : similarIndoorKeys.has(target.key)
+                                  ? ' copy-slot-dialog__option--similar-indoor'
+                                  : ''
+                            }`}>
                             <input
                               type="checkbox"
                               checked={selectedKeys.has(target.key)}

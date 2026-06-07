@@ -77,6 +77,7 @@ interface SimilarWeatherOptions {
   seasonScope: 'same' | 'all'
   targetFilename?: string
   indoorOnly?: boolean
+  matchIndoorVariant?: boolean
 }
 
 export function parseSeasonWeatherPath(folderPath: string): SeasonWeatherPath | null {
@@ -118,11 +119,16 @@ function findSimilarWeatherTargets<
   if (!family) return null
 
   const targetFilename = options.targetFilename ?? sourceFilename
+  const sourceIsIndoor = isIndoorFilename(sourceFilename)
+  const matchIndoorVariant = options.matchIndoorVariant ?? !options.indoorOnly
 
   const targets = candidates.filter((candidate) => {
     if (isSourceSlot(sourceFolderPath, sourceFilename, candidate)) return false
     if (candidate.filename !== targetFilename) return false
     if (options.indoorOnly && !isIndoorFilename(candidate.filename)) return false
+    if (matchIndoorVariant && isIndoorFilename(candidate.filename) !== sourceIsIndoor) {
+      return false
+    }
 
     const parsed = parseSeasonWeatherPath(candidate.folderPath)
     if (!parsed) return false
@@ -151,6 +157,7 @@ export function findSimilarWeatherSlotTargets<
 ): SimilarWeatherSelection<T> | null {
   return findSimilarWeatherTargets(sourceFolderPath, filename, candidates, {
     seasonScope: 'same',
+    matchIndoorVariant: true,
   })
 }
 
@@ -163,6 +170,7 @@ export function findSimilarWeatherSlotTargetsAllSeasons<
 ): SimilarWeatherSelection<T> | null {
   return findSimilarWeatherTargets(sourceFolderPath, filename, candidates, {
     seasonScope: 'all',
+    matchIndoorVariant: true,
   })
 }
 
@@ -180,5 +188,6 @@ export function findSimilarSeasonWeatherIndoorTargets<
     seasonScope: 'same',
     targetFilename: indoorFilename,
     indoorOnly: true,
+    matchIndoorVariant: false,
   })
 }

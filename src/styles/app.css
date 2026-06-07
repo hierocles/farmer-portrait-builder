@@ -1116,8 +1116,17 @@ code {
   line-height: 1.35;
 }
 
+.copy-slot-dialog__preset code {
+  font-size: 0.62rem;
+  word-break: break-all;
+}
+
 .copy-slot-dialog__option--similar code {
   color: var(--sdv-green-dark);
+}
+
+.copy-slot-dialog__option--similar-indoor code {
+  color: var(--sdv-ink-muted);
 }
 
 .copy-slot-dialog__field-header {

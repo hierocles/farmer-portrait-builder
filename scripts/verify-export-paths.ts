@@ -248,6 +248,32 @@ if (
   failed++
 }
 
+const mixedVariantCandidates = [
+  {
+    folderPath: 'Fall/Rain/',
+    filename: 'portrait_happy.png',
+    key: 'Fall/Rain/::portrait_happy.png',
+  },
+  {
+    folderPath: 'Fall/Rain/',
+    filename: 'portrait_happy_indoors.png',
+    key: 'Fall/Rain/::portrait_happy_indoors.png',
+  },
+]
+
+const outdoorOnly = findSimilarWeatherSlotTargets(
+  'Fall/GreenRain/',
+  'portrait_happy.png',
+  mixedVariantCandidates,
+)
+const outdoorFilenames = outdoorOnly?.targets.map((target) => target.filename) ?? []
+
+if (outdoorFilenames.length !== 1 || outdoorFilenames[0] !== 'portrait_happy.png') {
+  console.error('OUTDOOR SIMILAR WEATHER should not include indoor filenames')
+  console.error(`  actual filenames: ${outdoorFilenames.join(', ')}`)
+  failed++
+}
+
 if (failed > 0) {
   console.error(`verify-export-paths: ${failed} check(s) failed`)
   process.exit(1)
