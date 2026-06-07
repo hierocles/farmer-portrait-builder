@@ -1,0 +1,1537 @@
+{
+  "generatedAt": "2026-06-07T19:54:30.500Z",
+  "sourceMod": "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul",
+  "referenceFoldersScanned": [
+    "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul\\assets\\Player 1"
+  ],
+  "groups": {
+    "base": [
+      {
+        "id": "base",
+        "label": "Base (default)",
+        "folderPath": "",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "base",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "seasonWeather": [
+      {
+        "id": "Fall__GreenRain_",
+        "label": "Fall / GreenRain",
+        "folderPath": "Fall/GreenRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Rain_",
+        "label": "Fall / Rain",
+        "folderPath": "Fall/Rain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Storm_",
+        "label": "Fall / Storm",
+        "folderPath": "Fall/Storm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Sun_",
+        "label": "Fall / Sun",
+        "folderPath": "Fall/Sun/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Wind_",
+        "label": "Fall / Wind",
+        "folderPath": "Fall/Wind/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__GreenRain_",
+        "label": "Spring / GreenRain",
+        "folderPath": "Spring/GreenRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Rain_",
+        "label": "Spring / Rain",
+        "folderPath": "Spring/Rain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Storm_",
+        "label": "Spring / Storm",
+        "folderPath": "Spring/Storm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Sun_",
+        "label": "Spring / Sun",
+        "folderPath": "Spring/Sun/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Wind_",
+        "label": "Spring / Wind",
+        "folderPath": "Spring/Wind/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__GreenRain_",
+        "label": "Summer / GreenRain",
+        "folderPath": "Summer/GreenRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Rain_",
+        "label": "Summer / Rain",
+        "folderPath": "Summer/Rain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Storm_",
+        "label": "Summer / Storm",
+        "folderPath": "Summer/Storm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Sun_",
+        "label": "Summer / Sun",
+        "folderPath": "Summer/Sun/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Wind_",
+        "label": "Summer / Wind",
+        "folderPath": "Summer/Wind/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__GreenRain_",
+        "label": "Winter / GreenRain",
+        "folderPath": "Winter/GreenRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Rain_",
+        "label": "Winter / Rain",
+        "folderPath": "Winter/Rain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Snow_",
+        "label": "Winter / Snow",
+        "folderPath": "Winter/Snow/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Storm_",
+        "label": "Winter / Storm",
+        "folderPath": "Winter/Storm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Sun_",
+        "label": "Winter / Sun",
+        "folderPath": "Winter/Sun/",
+        "files": [
+          "portrait.png",
+          "portrait_Indoors.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Wind_",
+        "label": "Winter / Wind",
+        "folderPath": "Winter/Wind/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png",
+          "portrait_wind.png"
+        ],
+        "group": "seasonWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "festivals": [
+      {
+        "id": "Festivals__CommunityDay_",
+        "label": "Festivals / CommunityDay",
+        "folderPath": "Festivals/CommunityDay/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Dance of the Moonlight Jellies_",
+        "label": "Festivals / Dance of the Moonlight Jellies",
+        "folderPath": "Festivals/Dance of the Moonlight Jellies/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Desert Festival_",
+        "label": "Festivals / Desert Festival",
+        "folderPath": "Festivals/Desert Festival/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Egg Festival_",
+        "label": "Festivals / Egg Festival",
+        "folderPath": "Festivals/Egg Festival/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Feast of the Winter Star_",
+        "label": "Festivals / Feast of the Winter Star",
+        "folderPath": "Festivals/Feast of the Winter Star/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Festival of Ice_",
+        "label": "Festivals / Festival of Ice",
+        "folderPath": "Festivals/Festival of Ice/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Flower Dance_",
+        "label": "Festivals / Flower Dance",
+        "folderPath": "Festivals/Flower Dance/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Luau_",
+        "label": "Festivals / Luau",
+        "folderPath": "Festivals/Luau/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Night Market_",
+        "label": "Festivals / Night Market",
+        "folderPath": "Festivals/Night Market/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Spirit's Eve_",
+        "label": "Festivals / Spirit's Eve",
+        "folderPath": "Festivals/Spirit's Eve/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__SquidFest_",
+        "label": "Festivals / SquidFest",
+        "folderPath": "Festivals/SquidFest/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Stardew Valley Fair_",
+        "label": "Festivals / Stardew Valley Fair",
+        "folderPath": "Festivals/Stardew Valley Fair/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Surfing Festival_",
+        "label": "Festivals / Surfing Festival",
+        "folderPath": "Festivals/Surfing Festival/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Trout Derby_",
+        "label": "Festivals / Trout Derby",
+        "folderPath": "Festivals/Trout Derby/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Wedding_",
+        "label": "Festivals / Wedding",
+        "folderPath": "Festivals/Wedding/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Festivals__Zuzu Block Party_",
+        "label": "Festivals / Zuzu Block Party",
+        "folderPath": "Festivals/Zuzu Block Party/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "festivals",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "mining": [
+      {
+        "id": "Mining_",
+        "label": "Mining",
+        "folderPath": "Mining/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "mining",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "farming": [],
+    "pajamas": [
+      {
+        "id": "Pajamas_",
+        "label": "Pajamas",
+        "folderPath": "Pajamas/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "pajamas",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "swimsuit": [
+      {
+        "id": "Swimsuit_",
+        "label": "Swimsuit",
+        "folderPath": "Swimsuit/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "swimsuit",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "island": [
+      {
+        "id": "Island__Rain_",
+        "label": "Island / Rain",
+        "folderPath": "Island/Rain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "island",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Island__Sun_",
+        "label": "Island / Sun",
+        "folderPath": "Island/Sun/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "island",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "desert": [
+      {
+        "id": "Desert_",
+        "label": "Desert",
+        "folderPath": "Desert/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "desert",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "lumberjack": [],
+    "gardening": [
+      {
+        "id": "Gardening_",
+        "label": "Gardening",
+        "folderPath": "Gardening/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "gardening",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "stargazing": [],
+    "dangerWeather": [
+      {
+        "id": "Fall__kath.weathering_AcidRain_",
+        "label": "Fall / kath.weathering_AcidRain",
+        "folderPath": "Fall/kath.weathering_AcidRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__kath.weathering_Hurry_",
+        "label": "Fall / kath.weathering_Hurry",
+        "folderPath": "Fall/kath.weathering_Hurry/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__kath.weathering_MudRain_",
+        "label": "Fall / kath.weathering_MudRain",
+        "folderPath": "Fall/kath.weathering_MudRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__kath.weathering_Smog_",
+        "label": "Fall / kath.weathering_Smog",
+        "folderPath": "Fall/kath.weathering_Smog/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__kath.weathering_HeavyRain_",
+        "label": "Spring / kath.weathering_HeavyRain",
+        "folderPath": "Spring/kath.weathering_HeavyRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__kath.weathering_Locust_",
+        "label": "Spring / kath.weathering_Locust",
+        "folderPath": "Spring/kath.weathering_Locust/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__kath.weathering_Meatball_",
+        "label": "Spring / kath.weathering_Meatball",
+        "folderPath": "Spring/kath.weathering_Meatball/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__kath.weathering_Tornado_",
+        "label": "Spring / kath.weathering_Tornado",
+        "folderPath": "Spring/kath.weathering_Tornado/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_DryLightning_",
+        "label": "Summer / kath.weathering_DryLightning",
+        "folderPath": "Summer/kath.weathering_DryLightning/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_HeatWave_",
+        "label": "Summer / kath.weathering_HeatWave",
+        "folderPath": "Summer/kath.weathering_HeatWave/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_Sandstorm_",
+        "label": "Summer / kath.weathering_Sandstorm",
+        "folderPath": "Summer/kath.weathering_Sandstorm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_Wildfire_",
+        "label": "Summer / kath.weathering_Wildfire",
+        "folderPath": "Summer/kath.weathering_Wildfire/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__kath.weathering_Blizzard_",
+        "label": "Winter / kath.weathering_Blizzard",
+        "folderPath": "Winter/kath.weathering_Blizzard/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__kath.weathering_Hail_",
+        "label": "Winter / kath.weathering_Hail",
+        "folderPath": "Winter/kath.weathering_Hail/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      }
+    ],
+    "weatherWonders": [
+      {
+        "id": "Fall__Kana.WeatherWonders_Cloudy_",
+        "label": "Fall / Kana.WeatherWonders_Cloudy",
+        "folderPath": "Fall/Kana.WeatherWonders_Cloudy/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_Deluge_",
+        "label": "Fall / Kana.WeatherWonders_Deluge",
+        "folderPath": "Fall/Kana.WeatherWonders_Deluge/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_Drizzle_",
+        "label": "Fall / Kana.WeatherWonders_Drizzle",
+        "folderPath": "Fall/Kana.WeatherWonders_Drizzle/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_DryLightning_",
+        "label": "Fall / Kana.WeatherWonders_DryLightning",
+        "folderPath": "Fall/Kana.WeatherWonders_DryLightning/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_Hailstorm_",
+        "label": "Fall / Kana.WeatherWonders_Hailstorm",
+        "folderPath": "Fall/Kana.WeatherWonders_Hailstorm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_Mist_",
+        "label": "Fall / Kana.WeatherWonders_Mist",
+        "folderPath": "Fall/Kana.WeatherWonders_Mist/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__Kana.WeatherWonders_RainSnowMix_",
+        "label": "Fall / Kana.WeatherWonders_RainSnowMix",
+        "folderPath": "Fall/Kana.WeatherWonders_RainSnowMix/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_AcidRain_",
+        "label": "Spring / Kana.WeatherWonders_AcidRain",
+        "folderPath": "Spring/Kana.WeatherWonders_AcidRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_Cloudy_",
+        "label": "Spring / Kana.WeatherWonders_Cloudy",
+        "folderPath": "Spring/Kana.WeatherWonders_Cloudy/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_Deluge_",
+        "label": "Spring / Kana.WeatherWonders_Deluge",
+        "folderPath": "Spring/Kana.WeatherWonders_Deluge/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_Drizzle_",
+        "label": "Spring / Kana.WeatherWonders_Drizzle",
+        "folderPath": "Spring/Kana.WeatherWonders_Drizzle/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_DryLightning_",
+        "label": "Spring / Kana.WeatherWonders_DryLightning",
+        "folderPath": "Spring/Kana.WeatherWonders_DryLightning/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_Heatwave_",
+        "label": "Spring / Kana.WeatherWonders_Heatwave",
+        "folderPath": "Spring/Kana.WeatherWonders_Heatwave/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_Mist_",
+        "label": "Spring / Kana.WeatherWonders_Mist",
+        "folderPath": "Spring/Kana.WeatherWonders_Mist/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_MuddyRain_",
+        "label": "Spring / Kana.WeatherWonders_MuddyRain",
+        "folderPath": "Spring/Kana.WeatherWonders_MuddyRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Spring__Kana.WeatherWonders_RainSnowMix_",
+        "label": "Spring / Kana.WeatherWonders_RainSnowMix",
+        "folderPath": "Spring/Kana.WeatherWonders_RainSnowMix/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_AcidRain_",
+        "label": "Summer / Kana.WeatherWonders_AcidRain",
+        "folderPath": "Summer/Kana.WeatherWonders_AcidRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_Deluge_",
+        "label": "Summer / Kana.WeatherWonders_Deluge",
+        "folderPath": "Summer/Kana.WeatherWonders_Deluge/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_Drizzle_",
+        "label": "Summer / Kana.WeatherWonders_Drizzle",
+        "folderPath": "Summer/Kana.WeatherWonders_Drizzle/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_DryLightning_",
+        "label": "Summer / Kana.WeatherWonders_DryLightning",
+        "folderPath": "Summer/Kana.WeatherWonders_DryLightning/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_Hailstorm_",
+        "label": "Summer / Kana.WeatherWonders_Hailstorm",
+        "folderPath": "Summer/Kana.WeatherWonders_Hailstorm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_Heatwave_",
+        "label": "Summer / Kana.WeatherWonders_Heatwave",
+        "folderPath": "Summer/Kana.WeatherWonders_Heatwave/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__Kana.WeatherWonders_MuddyRain_",
+        "label": "Summer / Kana.WeatherWonders_MuddyRain",
+        "folderPath": "Summer/Kana.WeatherWonders_MuddyRain/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Kana.WeatherWonders_Blizzard_",
+        "label": "Winter / Kana.WeatherWonders_Blizzard",
+        "folderPath": "Winter/Kana.WeatherWonders_Blizzard/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Kana.WeatherWonders_RainSnowMix_",
+        "label": "Winter / Kana.WeatherWonders_RainSnowMix",
+        "folderPath": "Winter/Kana.WeatherWonders_RainSnowMix/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": true,
+        "hasExtended": false
+      }
+    ],
+    "other": []
+  },
+  "groupLabels": {
+    "base": "Base Portraits",
+    "seasonWeather": "Seasons & Weather",
+    "festivals": "Festivals",
+    "mining": "Mining",
+    "farming": "Farming",
+    "pajamas": "Pajamas",
+    "swimsuit": "Swimsuit",
+    "island": "Ginger Island",
+    "desert": "Desert",
+    "lumberjack": "Lumberjack",
+    "gardening": "Gardening",
+    "stargazing": "Stargazing",
+    "dangerWeather": "Project Danger Weather",
+    "weatherWonders": "Weather Wonders",
+    "other": "Other"
+  },
+  "coreGroups": ["base", "seasonWeather", "festivals"],
+  "advancedGroups": [
+    "weatherWonders",
+    "dangerWeather",
+    "mining",
+    "farming",
+    "pajamas",
+    "swimsuit",
+    "island",
+    "desert",
+    "lumberjack",
+    "gardening",
+    "stargazing"
+  ]
+}

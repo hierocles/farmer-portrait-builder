@@ -1,0 +1,243 @@
+{
+  "Changes": [
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Single festive outfit": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Single festive outfit": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Single festive outfit": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Single festive outfit": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Single festive outfit": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Single festive outfit": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Single festive outfit": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Single festive outfit": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Single festive outfit": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    //new emotions here
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    //new emotions here
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "TodaysFestivalEnabled": "true", "HasFile:{{FromFile}}": "true" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Festivals/{{FestivalPortraitFolder}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "TodaysFestivalEnabled": "true",
+        "HasFile:{{FromFile}}": "true"
+      }
+    }
+  ]
+}

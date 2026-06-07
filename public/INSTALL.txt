@@ -1,0 +1,54 @@
+Farmer Portrait Pack — Installation
+=====================================
+
+1. Extract this zip into your (CP) Farmer 2.0 ESWF mod folder.
+   The "assets" folder here should merge with the mod's existing "assets" folder.
+   This also overwrites portrait setup JSON in assets/setup/ with the updated
+   folder layout used by Farmer Portrait Builder.
+
+2. Confirm your farmer folder name matches your in-game save farmer name
+   (the folder under assets/, e.g. assets/Player 1/).
+
+3. Restart SMAPI (fully close and relaunch the game).
+
+4. Open Generic Mod Config Menu for (CP) Farmer 2.0 ESWF and enable
+   the portrait options that match the scenarios you configured.
+
+Missing portrait files do not cause errors — the mod falls back to the
+next highest-priority portrait. Only the files you assigned are included
+in this export.
+
+Portrait files must be 64x64 PNG for best results.
+
+Included ESWF setup files
+-------------------------
+assets/setup/portrait_setup.json
+assets/setup/portrait_cw.json
+assets/setup/portrait_festival.json
+assets/setup/portrait_newfestival.json
+assets/setup/portrait_swimsuit.json
+assets/setup/portrait_farming.json
+assets/setup/portrait_mining.json
+assets/setup/portrait_pajamas.json
+
+Expected folder layout (examples)
+---------------------------------
+assets/{FarmerName}/portrait.png
+assets/{FarmerName}/Spring/Sun/portrait_happy.png
+assets/{FarmerName}/Spring/Kana.WeatherWonders_Deluge/portrait.png
+assets/{FarmerName}/Spring/kath.weathering_HeavyRain/portrait.png
+assets/{FarmerName}/Festivals/Egg Festival/portrait.png
+assets/{FarmerName}/Mining/portrait.png
+assets/{FarmerName}/Pajamas/portrait.png
+
+Season weather, Weather Wonders, and Danger Weather all live under
+assets/{FarmerName}/{Season}/{weather-or-event-folder}/ using the exact
+folder names shown in the Portrait Builder for each scenario.
+
+Credits
+-------
+Portrait folder layout and ESWF setup JSON fixes are based on work from
+"Fern - a Farmer 2.0 ESFW preset with Weather Wonders functionality"
+by Dexnis (Nexus Mods #39037).
+
+Compatible with Farmer 2.0 ESWF by Salty (Nexus Mods #21226).

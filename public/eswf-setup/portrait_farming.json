@@ -1,0 +1,404 @@
+{
+  "Changes": [
+    {
+      //farming
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      //seasonal farming
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Farm, Farmcave, Coop, Barn, SlimeHutch"
+      }
+    },
+    {
+      //modded
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Farming/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      //modded seasonal
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_surprise.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Farming/{{Season}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Modded Farming": "true",
+        "Seasonal Farming": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedFarmingLocations}}"
+      }
+    }
+  ]
+}

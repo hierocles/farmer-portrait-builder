@@ -1,0 +1,180 @@
+{
+  "Changes": [
+    {
+      //bathhouse
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "BathHouse_MensLocker, BathHouse_WomensLocker, BathHouse_Pool"
+      }
+    },
+    //new emotions
+    {
+      //ModdedSwimsuitLocations
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName ": "{{ModdedSwimsuitLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName ": "{{ModdedSwimsuitLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName ": "{{ModdedSwimsuitLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_anrgy.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName ": "{{ModdedSwimsuitLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName ": "{{ModdedSwimsuitLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName ": "{{ModdedSwimsuitLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName ": "{{ModdedSwimsuitLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName ": "{{ModdedSwimsuitLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Swimsuit/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName ": "{{ModdedSwimsuitLocations}}"
+      }
+    }
+  ]
+}

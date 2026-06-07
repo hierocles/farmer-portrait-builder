@@ -1,0 +1,472 @@
+{
+  "Changes": [
+    {
+      //pajamas
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait.png",
+      "Update": "OnDayStart, OnLocationChange,OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //pajamas
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange,OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Morning pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: 600, {{PajamaMorningTime}} }}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Pajamas/{{season}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Evening pajamas": "true",
+        "Seasonal Pajamas": "true",
+        "Time": "{{Range: {{PajamaEveningTime}}, 2600}}",
+        "LocationName": "Farmhouse, IslandFarmHouse",
+        "HasFile:{{FromFile}}": "true"
+      }
+    }
+  ]
+}

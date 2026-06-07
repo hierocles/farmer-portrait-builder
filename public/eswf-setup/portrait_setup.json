@@ -1,0 +1,951 @@
+{
+  "Changes": [
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/background",
+      "FromFile": "assets/background.png",
+      "When": { "Use background": "true" }
+    },
+    //garbage portrait
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/portrait.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/portrait_happy.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/portrait_sad.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/portrait_angry.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/portrait_blush.png"
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/portrait_scared.png",
+      "When": { "More Player Emotions": "true" }
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/portrait_surprised.png",
+      "When": { "More Player Emotions": "true" }
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/portrait_disgust.png",
+      "When": { "More Player Emotions": "true" }
+    },
+    {
+      "Action": "Load",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/portrait_awkward.png",
+      "When": { "More Player Emotions": "true" }
+    },
+    // It is all "editimage" after here!!!
+    //this portrait is used as default
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    //these are used if talking to another NPC
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "More Player Emotions": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "More Player Emotions": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "More Player Emotions": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "More Player Emotions": "true"
+      }
+    },
+    //indoors
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    //these are used if talking to another NPC
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surpirsed_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward_indoors.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "IsOutdoors": "false"
+      }
+    },
+    {
+      //custome weathers PDW
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_cw.json",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": { "Project Danger Weathers": "true", "Weather |contains=kath.weathering_": "true" }
+    },
+    {
+      //custome weathers WW
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_cw.json",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": { "Weather Wonders": "true", "Weather |contains=Kana.WeatherWonders_": "true" }
+    },
+    {
+      //Festival portraits
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_festival.json",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": { "Festival outfits": "true", "HasValue: {{DayEvent}}": "true" }
+    },
+    {
+      //new Festival portraits
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_newfestival.json",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": { "Festival outfits": "true", "PassiveEvent": "true" }
+    },
+    {
+      //swimming setup
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_swimsuit.json",
+      "Update": "OnLocationChange",
+      "When": { "Swimsuit enabled": "true" }
+    },
+    {
+      //farming
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_farming.json",
+      "Update": "OnLocationChange",
+      "When": { "Farming outfit enabled": "true" }
+    },
+    {
+      //Mining
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_mining.json",
+      "Update": "OnLocationChange",
+      "When": { "Mining outfit enabled": "true" }
+    },
+    {
+      //island
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_happy.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_sad.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_angry.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_blush.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_scared.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_surprised.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_disgust.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Island/{{weather}}/portrait_awkward.png",
+      "Update": "OnDayStart, OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Island outfit enabled": "true",
+        "LocationContext": "Island",
+        "Weather: island": "{{weather}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //desert
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_surprised.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Desert/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //desert
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_surprised.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Desert/{{season}}/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Desert outfit enabled": "true",
+        "Seasonal Desert outfits enabled": "true",
+        "LocationName": "Desert, SandyHouse, Club, {{ModdedDesertLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //Lumber
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_surprised.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Lumberjack/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Lumberjack Outfit Enabled": "true",
+        "LocationName": "Woods, {{ModdedLumberjackLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //gardening
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_surprised.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Gardening/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Gardening Outfit Enabled": "true",
+        "LocationName": "Greenhouse, {{ModdedGreenhouseLocations}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //stargazing
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_happy.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_sad.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_angry.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_blush.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_scared.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_surprised.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_disgust.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Stargazing/portrait_awkward.png",
+      "Update": "OnTimeChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Star Gazing Outfit Enabled": "true",
+        "Time": "{{Range: {{StarGazingTime}}, 2600}}",
+        "Weather": "{{Moddedstargazingevents}}",
+        "HasFile:{{FromFile}}": "true"
+      }
+    },
+    {
+      //pajamas
+      "Action": "Include",
+      "FromFile": "assets/setup/portrait_pajamas.json",
+      "Update": "OnDayStart, OnLocationChange, OnTimeChange",
+      "When": { "Pajamas enabled": "true" }
+    }
+  ]
+}

@@ -1,0 +1,961 @@
+{
+  "Changes": [
+    {
+      //the mine, the quarry cave and the Skull Cavern
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Mine, SkullCave" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Mine, SkullCave" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Mine, SkullCave" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Mine, SkullCave" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Mine, SkullCave" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      //the mine, the quarry cave and the Skull Cavern seasonal
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mine, SkullCave"
+      }
+    },
+    //new emotions
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_anrgy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_anrgy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'UnderGroundMine*'": "true"
+      }
+    },
+    {
+      //the volcano
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Caldera" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Caldera" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Caldera" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Caldera" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "Caldera" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Caldera"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Caldera"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Caldera"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Caldera"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "Query: '{{LocationName}}' LIKE 'VolcanoDungeon*'": "true"
+      }
+    },
+    {
+      //the mountains
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_anrgy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      //the mountains seasonal
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_anrgy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/{{season}}/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mountain mining": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "Mountain, {{ModdedMountainMiningLocations}}"
+      }
+    },
+    {
+      //custom locations: East Scarp, Downtown Zuzu, Cape Stardew
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "{{ModdedMiningLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "{{ModdedMiningLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "{{ModdedMiningLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "{{ModdedMiningLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": { "HasFile:{{FromFile}}": "true", "LocationName": "{{ModdedMiningLocations}}" }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      //custom locations: East Scarp, Downtown Zuzu, Cape Stardew seasonal
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait1",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_happy.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait2",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_sad.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait3",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_angry.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait4",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_blush.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait5",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_scared.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait6",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_surprise.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait7",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_disgust.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    },
+    {
+      "Action": "EditImage",
+      "Target": "aedenthorn.FarmerPortraits/portrait8",
+      "FromFile": "assets/{{PlayerName}}/Mining/portrait_awkward.png",
+      "Update": "OnLocationChange",
+      "When": {
+        "More Player Emotions": "true",
+        "Mining Outfit Seasonal": "true",
+        "HasFile:{{FromFile}}": "true",
+        "LocationName": "{{ModdedMiningLocations}}"
+      }
+    }
+  ]
+}
