@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T19:54:30.500Z",
+  "generatedAt": "2026-06-07T23:07:50.465Z",
   "sourceMod": "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul",
   "referenceFoldersScanned": [
     "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul\\assets\\Player 1"
@@ -1520,7 +1520,11 @@
     "weatherWonders": "Weather Wonders",
     "other": "Other"
   },
-  "coreGroups": ["base", "seasonWeather", "festivals"],
+  "coreGroups": [
+    "base",
+    "seasonWeather",
+    "festivals"
+  ],
   "advancedGroups": [
     "weatherWonders",
     "dangerWeather",

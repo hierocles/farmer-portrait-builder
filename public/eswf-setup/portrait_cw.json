@@ -1,419 +1,418 @@
 {
-  "Changes": [
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait1",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait2",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait3",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait4",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait5",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait6",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surprised.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait7",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait8",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    //indoors
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait1",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait2",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait3",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait4",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait5",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait6",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surpirsed_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait7",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait8",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Project Danger Weathers": "true",
-        "Project Danger Weathers Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      //weather wonders
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait1",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait2",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait3",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait4",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait5",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait6",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surprised.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait7",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait8",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "HasFile:{{FromFile}}": "true",
-        "More Player Emotions": "true"
-      }
-    },
-    //indoors
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait1",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait2",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait3",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait4",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait5",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait6",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surpirsed_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait7",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    },
-    {
-      "Action": "EditImage",
-      "Target": "aedenthorn.FarmerPortraits/portrait8",
-      "FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward_indoors.png",
-      "Update": "OnDayStart, OnLocationChange",
-      "When": {
-        "Weather Wonders": "true",
-        "Weather Wonders Indoor Outfits": "true",
-        "More Player Emotions": "true",
-        "HasFile:{{FromFile}}": "true",
-        "IsOutdoors": "false"
-      }
-    }
-  ]
+	"Changes": [
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true" 
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait1",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait2",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait3",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait4",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true" 
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait5",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait6",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surprised.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait7",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait8",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		//indoors
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait1",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait2",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait3",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait4",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait5",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait6",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surpirsed_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait7",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait8",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Project Danger Weathers": "true",
+				"Project Danger Weathers Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{//weather wonders
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true" 
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait1",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait2",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait3",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait4",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true" 
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait5",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait6",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surprised.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait7",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait8",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"HasFile:{{FromFile}}": "true",
+				"More Player Emotions": "true"
+			}
+		},
+		//indoors
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait1",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_happy_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait2",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_sad_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait3",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_angry_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait4",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_blush_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait5",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_scared_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait6",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_surpirsed_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait7",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_disgust_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+		{
+			"Action": "EditImage",
+			"Target": "aedenthorn.FarmerPortraits/portrait8",
+			"FromFile": "assets/{{PlayerName}}/{{season}}/{{weather}}/portrait_awkward_indoors.png",
+			"Update": "OnDayStart, OnLocationChange",
+			"When": {
+				"Weather Wonders": "true",
+				"Weather Wonders Indoor Outfits": "true",
+				"More Player Emotions": "true",
+				"HasFile:{{FromFile}}": "true",
+				"IsOutdoors": "false"
+			}
+		},
+	]
 }

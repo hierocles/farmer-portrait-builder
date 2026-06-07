@@ -4,6 +4,7 @@ import { useDndContext, useDroppable } from '@dnd-kit/core'
 
 import { slotKey, isIndoorFilename } from '../lib/types'
 
+import { CopySlotDialog } from './CopySlotDialog'
 import { usePortraitStore } from '../store/portraitStore'
 
 interface PortraitSlotProps {
@@ -29,6 +30,8 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
   })
 
   const inputRef = useRef<HTMLInputElement>(null)
+
+  const [copyOpen, setCopyOpen] = useState(false)
 
   const { active } = useDndContext()
 
@@ -95,6 +98,15 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
           Upload
         </button>
 
+        {assignment?.source === 'custom' && (
+          <button
+            type="button"
+            className="btn-secondary"
+            onClick={() => setCopyOpen(true)}>
+            Copy
+          </button>
+        )}
+
         {assignment && (
           <button
             type="button"
@@ -118,6 +130,14 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
           }}
         />
       </div>
+
+      {copyOpen && (
+        <CopySlotDialog
+          folderPath={folderPath}
+          filename={filename}
+          onClose={() => setCopyOpen(false)}
+        />
+      )}
     </div>
   )
 }

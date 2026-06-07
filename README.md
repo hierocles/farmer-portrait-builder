@@ -8,6 +8,7 @@ Upload your emotion portraits, drag them into scenario slots, and export a ready
 
 - **Drag-and-drop assignment** — upload default emotion portraits, then drag them onto scenario slots
 - **Per-slot uploads** — override individual slots with custom PNGs
+- **Copy custom portraits** — duplicate a custom upload to one or more scenario slots without re-uploading
 - **Scenario groups** — base portraits, seasons & weather, festivals, and optional advanced groups (mining, pajamas, Weather Wonders, Danger Weather, and more)
 - **Configurable options** — extended emotions, indoor seasonal variants, and optional 64×64 resize on export
 - **Bulk actions** — fill all visible slots from defaults, clear all assignments
@@ -19,7 +20,7 @@ Upload your emotion portraits, drag them into scenario slots, and export a ready
 1. Open the hosted app or run it locally (see [Development](#development)).
 2. Enter your **Character Name** (must match your in-game farmer folder name, e.g. `Player 1`).
 3. Upload portraits in the **Default Portraits** palette (neutral, happy, sad, angry, blush, and optionally extended emotions).
-4. Drag palette portraits into scenario slots, or use **Upload** on individual slots for custom images.
+4. Drag palette portraits into scenario slots, or use **Upload** on individual slots for custom images. Use **Copy** on a custom slot to duplicate it to one or more other slots.
 5. Use **Fill visible** to apply your default emotions to every slot in the currently enabled scenario groups.
 6. Click **Export** to download `{CharacterName}-portraits.zip`.
 

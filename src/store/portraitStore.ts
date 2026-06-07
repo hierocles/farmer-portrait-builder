@@ -58,6 +58,17 @@ interface PortraitState {
   clearPaletteEmotion: (emotionKey: EmotionKey) => void
   assignFromPalette: (emotionKey: EmotionKey, folderPath: string, filename: string) => Promise<void>
   assignCustomFile: (folderPath: string, filename: string, file: File) => Promise<void>
+  copyCustomAssignment: (
+    fromFolderPath: string,
+    fromFilename: string,
+    toFolderPath: string,
+    toFilename: string,
+  ) => Promise<boolean>
+  copyCustomAssignmentToTargets: (
+    fromFolderPath: string,
+    fromFilename: string,
+    targets: { folderPath: string; filename: string }[],
+  ) => Promise<number>
   clearAssignment: (folderPath: string, filename: string) => void
   clearAssignmentsForScenarios: (scenarios: Scenario[]) => number
   clearAllAssignments: () => number
@@ -244,6 +255,45 @@ export const usePortraitStore = create<PortraitState>((set, get) => ({
     void savePersisted(get())
   },
 
+  copyCustomAssignment: async (fromFolderPath, fromFilename, toFolderPath, toFilename) => {
+    const copied = await get().copyCustomAssignmentToTargets(fromFolderPath, fromFilename, [
+      { folderPath: toFolderPath, filename: toFilename },
+    ])
+    return copied === 1
+  },
+
+  copyCustomAssignmentToTargets: async (fromFolderPath, fromFilename, targets) => {
+    if (targets.length === 0) return 0
+
+    const fromKey = slotKey(fromFolderPath, fromFilename)
+    const source = get().assignments[fromKey]
+    if (!source || source.source !== 'custom') return 0
+
+    const blob = await idbGet<Blob>(source.blobId)
+    if (!blob) return 0
+
+    const nextAssignments = { ...get().assignments }
+
+    for (const { folderPath, filename } of targets) {
+      const toKey = slotKey(folderPath, filename)
+      const existingTarget = nextAssignments[toKey]
+      if (existingTarget) void removeBlob(existingTarget.blobId)
+
+      const blobId = await storeBlob(blob)
+      const emotionKey = emotionFromFilename(filename) ?? source.emotionKey
+      nextAssignments[toKey] = {
+        blobId,
+        source: 'custom',
+        emotionKey,
+        warning: source.warning,
+      }
+    }
+
+    set({ assignments: nextAssignments })
+    void savePersisted(get())
+    return targets.length
+  },
+
   clearAssignment: (folderPath, filename) => {
     const key = slotKey(folderPath, filename)
     set((state) => {
@@ -359,16 +409,86 @@ export function getScenariosForGroup(group: ScenarioGroupKey): Scenario[] {
   return scenarioManifest.groups[group] ?? []
 }
 
+export interface SlotTarget {
+  folderPath: string
+  filename: string
+  key: string
+  scenarioId: string
+  scenarioLabel: string
+  groupKey: ScenarioGroupKey
+  groupLabel: string
+}
+
+export interface CopyTargetSection {
+  scenarioId: string
+  scenarioLabel: string
+  targets: SlotTarget[]
+}
+
+export interface CopyTargetGroup {
+  groupKey: ScenarioGroupKey
+  groupLabel: string
+  sections: CopyTargetSection[]
+}
+
 export function getVisibleSlots(settings: AppSettings): { folderPath: string; filename: string }[] {
-  const slots: { folderPath: string; filename: string }[] = []
+  return getVisibleSlotTargets(settings).map(({ folderPath, filename }) => ({
+    folderPath,
+    filename,
+  }))
+}
+
+export function getVisibleCopyTargetGroups(
+  settings: AppSettings,
+  excludeKey?: string,
+): CopyTargetGroup[] {
+  const groups: CopyTargetGroup[] = []
+
   for (const groupKey of getVisibleGroups(settings)) {
+    const groupLabel = scenarioManifest.groupLabels[groupKey] ?? groupKey
+    const sections: CopyTargetSection[] = []
+
     for (const scenario of getScenariosForGroup(groupKey)) {
+      const targets: SlotTarget[] = []
+
       for (const filename of getScenarioVisibleFiles(scenario, settings)) {
-        slots.push({ folderPath: scenario.folderPath, filename })
+        const key = slotKey(scenario.folderPath, filename)
+        if (key === excludeKey) continue
+        targets.push({
+          folderPath: scenario.folderPath,
+          filename,
+          key,
+          scenarioId: scenario.id,
+          scenarioLabel: scenario.label,
+          groupKey,
+          groupLabel,
+        })
+      }
+
+      if (targets.length > 0) {
+        sections.push({
+          scenarioId: scenario.id,
+          scenarioLabel: scenario.label,
+          targets,
+        })
       }
     }
+
+    if (sections.length > 0) {
+      groups.push({ groupKey, groupLabel, sections })
+    }
   }
-  return slots
+
+  return groups
+}
+
+export function getVisibleSlotTargets(
+  settings: AppSettings,
+  excludeKey?: string,
+): SlotTarget[] {
+  return getVisibleCopyTargetGroups(settings, excludeKey).flatMap((group) =>
+    group.sections.flatMap((section) => section.targets),
+  )
 }
 
 export function countVisibleSlots(settings: AppSettings): number {
