@@ -24,7 +24,7 @@ export function StickyToolbar({
         {filled}/{total}
       </span>
       <button type="button" disabled={exporting || assignmentCount === 0} onClick={onExport}>
-        {exporting ? 'Exporting…' : `Export (${assignmentCount})`}
+        {exporting ? 'Exporting…' : `Export for game (${assignmentCount})`}
       </button>
     </div>
   )

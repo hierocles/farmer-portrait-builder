@@ -17,6 +17,7 @@ import {
   slotKey,
 } from '../lib/types'
 import { migrateAssignmentKeys } from '../lib/exportPaths'
+import { parseProjectZip, type ImportProjectResult } from '../lib/importProject'
 import {
   createPreviewUrl,
   revokePreviewUrl,
@@ -73,6 +74,7 @@ interface PortraitState {
   clearAssignmentsForScenarios: (scenarios: Scenario[]) => number
   clearAllAssignments: () => number
   applyDefaultsToScenarios: (scenarios: Scenario[]) => Promise<number>
+  importProject: (file: File) => Promise<ImportProjectResult>
   getBlob: (blobId: string) => Promise<Blob | undefined>
   getAssignmentPreview: (key: string) => Promise<string | undefined>
 }
@@ -373,6 +375,57 @@ export const usePortraitStore = create<PortraitState>((set, get) => ({
     return count
   },
 
+  importProject: async (file) => {
+    const parsed = await parseProjectZip(file)
+
+    for (const entry of Object.values(get().palette)) {
+      if (entry) revokePreviewUrl(entry.previewUrl)
+    }
+
+    await clearAllStoredData()
+
+    const palette: Partial<Record<EmotionKey, PaletteEntry>> = {}
+    for (const [emotionKey, entry] of Object.entries(parsed.palette)) {
+      if (!entry) continue
+      const blobId = await storeBlob(entry.blob)
+      palette[emotionKey as EmotionKey] = {
+        blobId,
+        previewUrl: createPreviewUrl(entry.blob),
+        warning: entry.warning,
+      }
+    }
+
+    const assignments: Record<string, Assignment> = {}
+    for (const [key, assignment] of Object.entries(parsed.assignments)) {
+      const blob = parsed.assignmentBlobs.get(key)
+      if (!blob) continue
+      const blobId = await storeBlob(blob)
+      assignments[key] = {
+        ...assignment,
+        blobId,
+      }
+    }
+
+    set({
+      hydrated: true,
+      farmerName: parsed.farmerName,
+      settings: parsed.settings,
+      palette,
+      assignments,
+      blobCache: new Map(),
+    })
+
+    await savePersisted(get())
+
+    return {
+      farmerName: parsed.farmerName.trim() || 'Player 1',
+      paletteCount: parsed.paletteCount,
+      assignmentCount: parsed.assignmentCount,
+      migratedCount: parsed.migratedCount,
+      droppedCount: parsed.droppedCount,
+    }
+  },
+
   getBlob: async (blobId) => idbGet<Blob>(blobId),
 
   getAssignmentPreview: async (key) => {
@@ -525,6 +578,8 @@ export function countGroupSlotStats(
 }
 
 export { scenarioManifest }
+
+export type { ImportProjectResult }
 
 export async function clearAllStoredData(): Promise<void> {
   const allKeys = await keys()

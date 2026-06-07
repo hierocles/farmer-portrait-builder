@@ -13,6 +13,7 @@ Upload your emotion portraits, drag them into scenario slots, and export a ready
 - **Configurable options** — extended emotions, indoor seasonal variants, and optional 64×64 resize on export
 - **Bulk actions** — fill all visible slots from defaults, clear all assignments
 - **Local persistence** — your work is saved in the browser between sessions
+- **Save / load project** — download or restore a `.fpb.zip` backup to move in-progress work between browsers or devices
 - **One-click export** — downloads a zip with portraits, updated ESWF `assets/setup/*.json` files, and an `INSTALL.txt` guide
 
 ## Using the app
@@ -22,7 +23,9 @@ Upload your emotion portraits, drag them into scenario slots, and export a ready
 3. Upload portraits in the **Default Portraits** palette (neutral, happy, sad, angry, blush, and optionally extended emotions).
 4. Drag palette portraits into scenario slots, or use **Upload** on individual slots for custom images. Use **Copy** on a custom slot to duplicate it to one or more other slots.
 5. Use **Fill visible** to apply your default emotions to every slot in the currently enabled scenario groups.
-6. Click **Export** to download `{CharacterName}-portraits.zip`.
+6. Click **Export for game** to download `{CharacterName}-portraits.zip` for Stardew Valley.
+
+Use **Save project** to back up your in-progress layout (palette, settings, assignments) as a `{CharacterName}-project.fpb.zip` file. **Load project** restores that backup and replaces current browser data. **Export for game** is separate — it builds the installable mod portrait pack.
 
 Portrait files should be **64×64 PNG** for best results. Enable **Resize to 64×64 on export** in Settings if your source images are a different size.
 
@@ -77,6 +80,7 @@ The dev server starts at `http://localhost:5173`. `predev` automatically generat
 | `npm run sync-eswf-setup`     | Copy ESWF portrait setup JSON into `public/eswf-setup/` |
 | `npm run fetch:fonts`         | Download the NF Pixels font into `public/fonts/`        |
 | `npm run verify-export-paths` | Validate export path resolution against the manifest    |
+| `npm run verify-project-roundtrip` | Validate `.fpb.zip` project file parse/export format |
 
 ### Regenerating the scenario manifest
 

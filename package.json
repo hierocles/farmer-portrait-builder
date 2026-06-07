@@ -9,6 +9,7 @@
     "sync-eswf-setup": "node scripts/sync-eswf-setup.mjs",
     "fetch:fonts": "node scripts/fetch-nf-pixels.mjs",
     "verify-export-paths": "npx --yes tsx scripts/verify-export-paths.ts",
+    "verify-project-roundtrip": "npx --yes tsx scripts/verify-project-roundtrip.ts",
     "predev": "npm run generate-manifest && npm run sync-eswf-setup && npm run fetch:fonts",
     "dev": "vite",
     "prebuild": "npm run generate-manifest && npm run sync-eswf-setup && npm run fetch:fonts",
