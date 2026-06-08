@@ -409,6 +409,17 @@ code {
   outline-offset: 1px;
 }
 
+.export-bar__project-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.export-bar__clear-data {
+  font-size: 0.68rem;
+}
+
 .export-bar__message {
   margin: 0.85rem 0 0;
   padding: 0.55rem 0.75rem;
