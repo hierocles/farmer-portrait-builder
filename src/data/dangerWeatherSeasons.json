@@ -1,0 +1,17 @@
+{
+  "kath.weathering_HeavyRain": ["Spring"],
+  "kath.weathering_Meatball": ["Spring"],
+  "kath.weathering_Locust": ["Spring"],
+  "kath.weathering_Tornado": ["Spring"],
+  "kath.weathering_HeatWave": ["Summer"],
+  "kath.weathering_DryLightning": ["Summer"],
+  "kath.weathering_Sandstorm": ["Summer"],
+  "kath.weathering_Wildfire": ["Summer"],
+  "kath.weathering_Monsoon": ["Summer"],
+  "kath.weathering_AcidRain": ["Fall"],
+  "kath.weathering_MudRain": ["Fall"],
+  "kath.weathering_Smog": ["Fall"],
+  "kath.weathering_Hail": ["Winter"],
+  "kath.weathering_Blizzard": ["Winter"],
+  "kath.weathering_NoVis": ["Spring", "Summer", "Fall", "Winter"]
+}

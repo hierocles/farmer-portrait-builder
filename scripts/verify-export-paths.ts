@@ -13,6 +13,14 @@ import {
   getWeatherFamily,
   parseSeasonWeatherPath,
 } from '../src/lib/weatherFamilies.ts'
+import {
+  isEligibleDangerWeatherFolder,
+  listCanonicalDangerWeatherFolders,
+} from '../src/lib/dangerWeatherSeasons.ts'
+import {
+  isEligibleWeatherWonderFolder,
+  listCanonicalWeatherWonderFolders,
+} from '../src/lib/weatherWondersSeasons.ts'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
 
@@ -49,6 +57,34 @@ for (const folder of requiredFolders) {
   }
 }
 
+for (const folder of listCanonicalWeatherWonderFolders()) {
+  if (!manifestFolders.has(folder)) {
+    console.error(`MISSING canonical Weather Wonders folder: ${folder}`)
+    failed++
+  }
+}
+
+for (const folder of listCanonicalDangerWeatherFolders()) {
+  if (!manifestFolders.has(folder)) {
+    console.error(`MISSING canonical Danger Weather folder: ${folder}`)
+    failed++
+  }
+}
+
+for (const folder of manifestFolders) {
+  if (/Kana\.WeatherWonders_/i.test(folder) && !isEligibleWeatherWonderFolder(folder)) {
+    console.error(`INELIGIBLE Weather Wonders folder in manifest: ${folder}`)
+    failed++
+  }
+}
+
+for (const folder of manifestFolders) {
+  if (/kath\.weathering_/i.test(folder) && !isEligibleDangerWeatherFolder(folder)) {
+    console.error(`INELIGIBLE Danger Weather folder in manifest: ${folder}`)
+    failed++
+  }
+}
+
 for (const folder of manifestFolders) {
   if (/^(DangerWeather|WeatherWonders)\//.test(folder) || folder.startsWith('festivals/')) {
     console.error(`LEGACY folder still in manifest: ${folder}`)
@@ -59,8 +95,14 @@ for (const folder of manifestFolders) {
 const migrationCases: Array<[string, string]> = [
   ['DangerWeather/Heavy Rain/', 'Spring/kath.weathering_HeavyRain/'],
   ['DangerWeather/kath.weathering_Blizzard/', 'Winter/kath.weathering_Blizzard/'],
+  ['DangerWeather/Tropical Storm/', 'Summer/kath.weathering_Monsoon/'],
+  ['DangerWeather/Monsoon/', 'Summer/kath.weathering_Monsoon/'],
+  ['DangerWeather/Summer/kath.weathering_Monsoon/', 'Summer/kath.weathering_Monsoon/'],
+  ['DangerWeather/Heavy Fog Spring/', 'Spring/kath.weathering_NoVis/'],
   ['WeatherWonders/Spring/Deluge Spring/', 'Spring/Kana.WeatherWonders_Deluge/'],
   ['WeatherWonders/Spring/Kana.WeatherWonders_Deluge/', 'Spring/Kana.WeatherWonders_Deluge/'],
+  ['WeatherWonders/Spring/Sandstorm Spring/', 'Spring/Kana.WeatherWonders_Sandstorm/'],
+  ['WeatherWonders/Spring/Heatwave Spring/', 'Spring/Kana.WeatherWonders_Heatwave/'],
   ['festivals/EggFestival/', 'Festivals/Egg Festival/'],
   ['festivals/Communityday/', 'Festivals/CommunityDay/'],
   ['pajamas/Spring/', 'Pajamas/'],
@@ -92,6 +134,9 @@ const weatherCases: Array<[string, string | null]> = [
   ['Fall/kath.weathering_AcidRain/', 'rain'],
   ['Fall/Kana.WeatherWonders_Deluge/', 'rain'],
   ['Fall/Kana.WeatherWonders_Cloudy/', 'cloudy'],
+  ['Spring/Kana.WeatherWonders_Sandstorm/', 'dry'],
+  ['Summer/kath.weathering_Monsoon/', 'rain'],
+  ['Spring/kath.weathering_NoVis/', 'cloudy'],
   ['Festivals/Egg Festival/', null],
 ]
 

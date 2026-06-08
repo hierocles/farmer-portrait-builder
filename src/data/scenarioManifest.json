@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-07T23:07:50.465Z",
+  "generatedAt": "2026-06-08T17:20:24.221Z",
   "sourceMod": "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul",
   "referenceFoldersScanned": [
     "F:\\Stardew\\Farmer 2.0 ESWF NPC Reaction Overhaul\\assets\\Player 1"
@@ -819,26 +819,6 @@
         "hasExtended": false
       },
       {
-        "id": "Fall__kath.weathering_Hurry_",
-        "label": "Fall / kath.weathering_Hurry",
-        "folderPath": "Fall/kath.weathering_Hurry/",
-        "files": [
-          "portrait.png",
-          "portrait_angry.png",
-          "portrait_angry_indoors.png",
-          "portrait_blush.png",
-          "portrait_blush_indoors.png",
-          "portrait_happy.png",
-          "portrait_happy_indoors.png",
-          "portrait_indoors.png",
-          "portrait_sad.png",
-          "portrait_sad_indoors.png"
-        ],
-        "group": "dangerWeather",
-        "hasIndoor": true,
-        "hasExtended": false
-      },
-      {
         "id": "Fall__kath.weathering_MudRain_",
         "label": "Fall / kath.weathering_MudRain",
         "folderPath": "Fall/kath.weathering_MudRain/",
@@ -856,6 +836,21 @@
         ],
         "group": "dangerWeather",
         "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Fall__kath.weathering_NoVis_",
+        "label": "Fall / kath.weathering_NoVis",
+        "folderPath": "Fall/kath.weathering_NoVis/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
         "hasExtended": false
       },
       {
@@ -934,6 +929,21 @@
         "hasExtended": false
       },
       {
+        "id": "Spring__kath.weathering_NoVis_",
+        "label": "Spring / kath.weathering_NoVis",
+        "folderPath": "Spring/kath.weathering_NoVis/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
         "id": "Spring__kath.weathering_Tornado_",
         "label": "Spring / kath.weathering_Tornado",
         "folderPath": "Spring/kath.weathering_Tornado/",
@@ -967,6 +977,41 @@
         "id": "Summer__kath.weathering_HeatWave_",
         "label": "Summer / kath.weathering_HeatWave",
         "folderPath": "Summer/kath.weathering_HeatWave/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_Monsoon_",
+        "label": "Summer / kath.weathering_Monsoon",
+        "folderPath": "Summer/kath.weathering_Monsoon/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_angry_indoors.png",
+          "portrait_blush.png",
+          "portrait_blush_indoors.png",
+          "portrait_happy.png",
+          "portrait_happy_indoors.png",
+          "portrait_indoors.png",
+          "portrait_sad.png",
+          "portrait_sad_indoors.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Summer__kath.weathering_NoVis_",
+        "label": "Summer / kath.weathering_NoVis",
+        "folderPath": "Summer/kath.weathering_NoVis/",
         "files": [
           "portrait.png",
           "portrait_angry.png",
@@ -1037,6 +1082,21 @@
         "id": "Winter__kath.weathering_Hail_",
         "label": "Winter / kath.weathering_Hail",
         "folderPath": "Winter/kath.weathering_Hail/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "dangerWeather",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__kath.weathering_NoVis_",
+        "label": "Winter / kath.weathering_NoVis",
+        "folderPath": "Winter/kath.weathering_NoVis/",
         "files": [
           "portrait.png",
           "portrait_angry.png",
@@ -1336,6 +1396,21 @@
         "hasExtended": false
       },
       {
+        "id": "Spring__Kana.WeatherWonders_Sandstorm_",
+        "label": "Spring / Kana.WeatherWonders_Sandstorm",
+        "folderPath": "Spring/Kana.WeatherWonders_Sandstorm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
         "id": "Summer__Kana.WeatherWonders_AcidRain_",
         "label": "Summer / Kana.WeatherWonders_AcidRain",
         "folderPath": "Summer/Kana.WeatherWonders_AcidRain/",
@@ -1461,6 +1536,21 @@
         "hasExtended": false
       },
       {
+        "id": "Summer__Kana.WeatherWonders_Sandstorm_",
+        "label": "Summer / Kana.WeatherWonders_Sandstorm",
+        "folderPath": "Summer/Kana.WeatherWonders_Sandstorm/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
+        "hasExtended": false
+      },
+      {
         "id": "Winter__Kana.WeatherWonders_Blizzard_",
         "label": "Winter / Kana.WeatherWonders_Blizzard",
         "folderPath": "Winter/Kana.WeatherWonders_Blizzard/",
@@ -1478,6 +1568,21 @@
         ],
         "group": "weatherWonders",
         "hasIndoor": true,
+        "hasExtended": false
+      },
+      {
+        "id": "Winter__Kana.WeatherWonders_DryLightning_",
+        "label": "Winter / Kana.WeatherWonders_DryLightning",
+        "folderPath": "Winter/Kana.WeatherWonders_DryLightning/",
+        "files": [
+          "portrait.png",
+          "portrait_angry.png",
+          "portrait_blush.png",
+          "portrait_happy.png",
+          "portrait_sad.png"
+        ],
+        "group": "weatherWonders",
+        "hasIndoor": false,
         "hasExtended": false
       },
       {
