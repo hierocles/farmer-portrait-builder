@@ -46,6 +46,7 @@ const requiredFolders = [
   'Pajamas/',
   'Island/Sun/',
   'Gardening/',
+  'Stargazing/',
 ]
 
 let failed = 0

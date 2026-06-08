@@ -98,7 +98,7 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
           Upload
         </button>
 
-        {assignment?.source === 'custom' && (
+        {assignment && (
           <button
             type="button"
             className="btn-secondary"

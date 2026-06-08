@@ -1,5 +1,6 @@
-import { useState } from 'react'
+import { useMemo, useState } from 'react'
 
+import { groupScenariosBySeason, SEASON_COLLAPSIBLE_GROUPS } from '../lib/seasonGroups'
 import type { Scenario, ScenarioGroupKey } from '../lib/types'
 
 import {
@@ -10,6 +11,7 @@ import {
 } from '../store/portraitStore'
 
 import { ScenarioCard } from './ScenarioCard'
+import { SeasonScenarioSection } from './SeasonScenarioSection'
 
 interface ScenarioGroupProps {
   groupKey: ScenarioGroupKey
@@ -43,6 +45,13 @@ export function ScenarioGroup({ groupKey, scenarios, defaultOpen = true }: Scena
   const progressPct = total > 0 ? Math.round((filled / total) * 100) : 0
 
   const canFillGroup = hasPalettePortraits(palette)
+
+  const useSeasonSections = SEASON_COLLAPSIBLE_GROUPS.has(groupKey)
+
+  const seasonGroups = useMemo(
+    () => (useSeasonSections ? groupScenariosBySeason(scenarios) : []),
+    [scenarios, useSeasonSections],
+  )
 
   const handleFill = async () => {
     setFilling(true)
@@ -103,13 +112,25 @@ export function ScenarioGroup({ groupKey, scenarios, defaultOpen = true }: Scena
 
       {feedback && <p className="scenario-group__feedback">{feedback}</p>}
 
-      {open && (
-        <div className="scenario-group__grid">
-          {scenarios.map((scenario) => (
-            <ScenarioCard key={scenario.id} scenario={scenario} />
-          ))}
-        </div>
-      )}
+      {open &&
+        (useSeasonSections ? (
+          <div className="scenario-group__seasons">
+            {seasonGroups.map((seasonGroup, index) => (
+              <SeasonScenarioSection
+                key={seasonGroup.season}
+                season={seasonGroup.season}
+                scenarios={seasonGroup.scenarios}
+                defaultOpen={index === 0}
+              />
+            ))}
+          </div>
+        ) : (
+          <div className="scenario-group__grid">
+            {scenarios.map((scenario) => (
+              <ScenarioCard key={scenario.id} scenario={scenario} />
+            ))}
+          </div>
+        ))}
     </section>
   )
 }

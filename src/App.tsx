@@ -181,8 +181,8 @@ export default function App() {
             <h2>Scenario Journal</h2>
 
             <p className="scenarios__hint">
-              Drag default portraits onto slots, upload unique portraits per scenario, copy custom
-              uploads to other slots, or use bulk fill.
+              Drag default portraits onto slots, upload unique portraits per scenario, copy portraits
+              to other slots, or use bulk fill.
             </p>
 
             {visibleGroups.map((groupKey, index) => (
