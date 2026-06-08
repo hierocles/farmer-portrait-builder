@@ -242,7 +242,7 @@ export function ExportBar() {
 
           <button
             type="button"
-            className="btn-secondary export-bar__clear-data"
+            className="btn-secondary"
             disabled={projectBusy}
             onClick={() => void handleClearSavedData()}>
             Clear saved data

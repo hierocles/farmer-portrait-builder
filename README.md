@@ -84,14 +84,9 @@ The dev server starts at `http://localhost:5173`. `predev` automatically generat
 
 ### Regenerating the scenario manifest
 
-`npm run generate-manifest` scans portrait folders from a local copy of the Farmer 2.0 ESWF mod:
+`npm run generate-manifest` rebuilds `src/data/scenarioManifest.json` from canonical scenario definitions in `scripts/canonical-manifest.mjs`. Those definitions are aligned with the bundled ESWF setup JSON and the season eligibility maps in `src/data/weatherWondersSeasons.json` and `src/data/dangerWeatherSeasons.json`.
 
-```cmd
-../Farmer 2.0 ESWF NPC Reaction Overhaul/assets/Player 1
-../Farmer 2.0 ESWF NPC Reaction Overhaul/assets/Example
-```
-
-If those folders are not present (e.g. in CI), the script keeps the committed `scenarioManifest.json` unchanged.
+The generator does not scan mod portrait folders on disk, so manifest output is stable in CI and does not depend on a local `Player 1` example pack.
 
 ### ESWF setup JSON
 

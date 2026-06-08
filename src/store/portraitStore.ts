@@ -269,7 +269,7 @@ export const usePortraitStore = create<PortraitState>((set, get) => ({
 
     const fromKey = slotKey(fromFolderPath, fromFilename)
     const source = get().assignments[fromKey]
-    if (!source || source.source !== 'custom') return 0
+    if (!source) return 0
 
     const blob = await idbGet<Blob>(source.blobId)
     if (!blob) return 0
@@ -282,12 +282,21 @@ export const usePortraitStore = create<PortraitState>((set, get) => ({
       if (existingTarget) void removeBlob(existingTarget.blobId)
 
       const blobId = await storeBlob(blob)
-      const emotionKey = emotionFromFilename(filename) ?? source.emotionKey
-      nextAssignments[toKey] = {
-        blobId,
-        source: 'custom',
-        emotionKey,
-        warning: source.warning,
+
+      if (source.source === 'palette') {
+        nextAssignments[toKey] = {
+          blobId,
+          source: 'palette',
+          emotionKey: source.emotionKey,
+        }
+      } else {
+        const emotionKey = emotionFromFilename(filename) ?? source.emotionKey
+        nextAssignments[toKey] = {
+          blobId,
+          source: 'custom',
+          emotionKey,
+          warning: source.warning,
+        }
       }
     }
 
