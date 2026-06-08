@@ -1,5 +1,7 @@
 import { normalizeFolderPath } from './exportPaths'
 import { isIndoorFilename, resolveIndoorCounterpartFilename } from './types'
+import { isDangerWeatherEligible, parseDangerWeatherPath } from './dangerWeatherSeasons'
+import { isWeatherWonderEligible, parseWeatherWonderPath } from './weatherWondersSeasons'
 
 export type Season = 'Spring' | 'Summer' | 'Fall' | 'Winter'
 
@@ -35,9 +37,11 @@ const WEATHER_FAMILY_BY_KEY: Record<string, WeatherFamily> = {
   Snow: 'snow',
 
   'kath.weathering_HeavyRain': 'rain',
+  'kath.weathering_Meatball': 'rain',
+  'kath.weathering_Locust': 'rain',
+  'kath.weathering_Monsoon': 'rain',
   'kath.weathering_AcidRain': 'rain',
   'kath.weathering_MudRain': 'rain',
-  'kath.weathering_Hurry': 'rain',
   'kath.weathering_Tornado': 'storm',
   'kath.weathering_DryLightning': 'storm',
   'kath.weathering_Hail': 'snow',
@@ -46,6 +50,7 @@ const WEATHER_FAMILY_BY_KEY: Record<string, WeatherFamily> = {
   'kath.weathering_Wildfire': 'heat',
   'kath.weathering_Sandstorm': 'dry',
   'kath.weathering_Smog': 'cloudy',
+  'kath.weathering_NoVis': 'cloudy',
 
   'Kana.WeatherWonders_Deluge': 'rain',
   'Kana.WeatherWonders_Drizzle': 'rain',
@@ -58,6 +63,7 @@ const WEATHER_FAMILY_BY_KEY: Record<string, WeatherFamily> = {
   'Kana.WeatherWonders_Blizzard': 'snow',
   'Kana.WeatherWonders_Cloudy': 'cloudy',
   'Kana.WeatherWonders_Mist': 'cloudy',
+  'Kana.WeatherWonders_Sandstorm': 'dry',
 }
 
 export interface SeasonWeatherPath {
@@ -133,6 +139,22 @@ function findSimilarWeatherTargets<
     const parsed = parseSeasonWeatherPath(candidate.folderPath)
     if (!parsed) return false
     if (options.seasonScope === 'same' && parsed.season !== source.season) return false
+
+    const weatherWonder = parseWeatherWonderPath(candidate.folderPath)
+    if (
+      weatherWonder &&
+      !isWeatherWonderEligible(weatherWonder.season, weatherWonder.weatherKey)
+    ) {
+      return false
+    }
+
+    const dangerWeather = parseDangerWeatherPath(candidate.folderPath)
+    if (
+      dangerWeather &&
+      !isDangerWeatherEligible(dangerWeather.season, dangerWeather.weatherKey)
+    ) {
+      return false
+    }
 
     return getWeatherFamily(parsed.weatherKey) === family
   })

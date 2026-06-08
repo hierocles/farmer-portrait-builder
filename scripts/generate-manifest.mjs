@@ -1,8 +1,14 @@
-import { existsSync, mkdirSync, readdirSync, writeFileSync } from 'node:fs'
+import { existsSync, mkdirSync, readdirSync, readFileSync, writeFileSync } from 'node:fs'
 import { join, dirname } from 'node:path'
 import { fileURLToPath } from 'node:url'
 
 const __dirname = dirname(fileURLToPath(import.meta.url))
+const WEATHER_WONDERS_SEASONS = JSON.parse(
+  readFileSync(join(__dirname, '../src/data/weatherWondersSeasons.json'), 'utf8'),
+)
+const DANGER_WEATHER_SEASONS = JSON.parse(
+  readFileSync(join(__dirname, '../src/data/dangerWeatherSeasons.json'), 'utf8'),
+)
 const MOD_ROOT = join(__dirname, '../../Farmer 2.0 ESWF NPC Reaction Overhaul')
 const PLAYER1_ROOT = join(MOD_ROOT, 'assets/Player 1')
 const EXAMPLE_ROOT = join(MOD_ROOT, 'assets/Example')
@@ -11,6 +17,24 @@ const OUTPUT = join(__dirname, '../src/data/scenarioManifest.json')
 function normalizeFolderPath(folderPath) {
   if (!folderPath) return ''
   return folderPath.replace(/\\/g, '/').replace(/\/?$/, '/')
+}
+
+function isEligibleWeatherWonderFolder(folderPath) {
+  const match = folderPath.match(/^(Spring|Summer|Fall|Winter)\/(Kana\.WeatherWonders_[^/]+)\/$/i)
+  if (!match) return true
+  const [, season, weatherKey] = match
+  const eligibleSeasons = WEATHER_WONDERS_SEASONS[weatherKey]
+  if (!eligibleSeasons) return false
+  return eligibleSeasons.includes(season)
+}
+
+function isEligibleDangerWeatherFolder(folderPath) {
+  const match = folderPath.match(/^(Spring|Summer|Fall|Winter)\/(kath\.weathering_[^/]+)\/$/i)
+  if (!match) return true
+  const [, season, weatherKey] = match
+  const eligibleSeasons = DANGER_WEATHER_SEASONS[weatherKey]
+  if (!eligibleSeasons) return false
+  return eligibleSeasons.includes(season)
 }
 
 function classifyFolder(folderPath) {
@@ -110,6 +134,9 @@ if (scenarioFiles.size === 0) {
 const scenarioMap = new Map()
 
 for (const [folderPath, files] of scenarioFiles.entries()) {
+  if (!isEligibleWeatherWonderFolder(folderPath)) continue
+  if (!isEligibleDangerWeatherFolder(folderPath)) continue
+
   const fileList = [...files].sort()
   const group = classifyFolder(folderPath)
   scenarioMap.set(makeScenarioId(folderPath), {

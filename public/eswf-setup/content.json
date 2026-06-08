@@ -925,10 +925,15 @@
 			"Section": "Project Danger Weather Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
-		"Tropical Storm": {
-			"Default": "Tropical Storm",
+		"Monsoon": {
+			"Default": "Monsoon",
 			"Section": "Project Danger Weather Outfits",
-			"Description": "The outfit you wear when the downpours hit"
+			"Description": "The outfit you wear during a monsoon"
+		},
+		"Heavy Fog": {
+			"Default": "Heavy Fog",
+			"Section": "Project Danger Weather Outfits",
+			"Description": "The outfit you wear when heavy fog rolls in"
 		},
 		"Heavy Rains Indoor": {
 			"Default": "Heavy Rain Indoor",
@@ -995,10 +1000,15 @@
 			"Section": "Project Danger Weather Indoor Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
-		"Tropical Storm Indoor": {
-			"Default": "Tropical Storm Indoor ",
+		"Monsoon Indoor": {
+			"Default": "Monsoon Indoor",
 			"Section": "Project Danger Weather Indoor Outfits",
-			"Description": "The outfit you wear when the downpours hit"
+			"Description": "The outfit you wear indoors during a monsoon"
+		},
+		"Heavy Fog Indoor": {
+			"Default": "Heavy Fog Indoor",
+			"Section": "Project Danger Weather Indoor Outfits",
+			"Description": "The outfit you wear indoors when heavy fog rolls in"
 		},
 		
 		"Drizzle Spring": {
@@ -1017,17 +1027,17 @@
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Spring": {
-			"Default": "Drizzle Spring",
+			"Default": "Deluge Spring",
 			"Section": "Weather Wonders Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Summer": {
-			"Default": "Drizzle Summer",
+			"Default": "Deluge Summer",
 			"Section": "Weather Wonders Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Fall": {
-			"Default": "Drizzle Fall",
+			"Default": "Deluge Fall",
 			"Section": "Weather Wonders Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
@@ -1096,6 +1106,16 @@
 			"Section": "Weather Wonders Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
+		"Sandstorm Spring": {
+			"Default": "Sandstorm Spring",
+			"Section": "Weather Wonders Outfits",
+			"Description": "The outfit you wear during a sandstorm"
+		},
+		"Sandstorm Summer": {
+			"Default": "Sandstorm Summer",
+			"Section": "Weather Wonders Outfits",
+			"Description": "The outfit you wear during a sandstorm"
+		},
 		"Blizzard Winter": {
 			"Default": "Blizzard Winter",
 			"Section": "Weather Wonders Outfits",
@@ -1117,17 +1137,17 @@
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Spring Indoor": {
-			"Default": "Drizzle Spring Indoor",
+			"Default": "Deluge Spring Indoor",
 			"Section": "Weather Wonders Indoor Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Summer Indoor": {
-			"Default": "Drizzle Summer Indoor",
+			"Default": "Deluge Summer Indoor",
 			"Section": "Weather Wonders Indoor Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
 		"Deluge Fall Indoor": {
-			"Default": "Drizzle Fall Indoor",
+			"Default": "Deluge Fall Indoor",
 			"Section": "Weather Wonders Indoor Outfits",
 			"Description": "The outfit you wear when the downpours hit"
 		},
@@ -1195,6 +1215,16 @@
 			"Default": "Muddy Rain Summer Indoor",
 			"Section": "Weather Wonders Indoor Outfits",
 			"Description": "Bundle up its about to get cold"
+		},
+		"Sandstorm Spring Indoor": {
+			"Default": "Sandstorm Spring Indoor",
+			"Section": "Weather Wonders Indoor Outfits",
+			"Description": "The outfit you wear indoors during a sandstorm"
+		},
+		"Sandstorm Summer Indoor": {
+			"Default": "Sandstorm Summer Indoor",
+			"Section": "Weather Wonders Indoor Outfits",
+			"Description": "The outfit you wear indoors during a sandstorm"
 		},
 		"Blizzard Winter Indoor": {
 			"Default": "Blizzard Winter Indoor",
@@ -3046,13 +3076,13 @@
 		},
 		{
 			"Name": "DangerWeatherOutfits",
-			"Value": "{{Tropical Storm}}",
-			"When": { "Season": "Fall", "Weather": "kath.weathering_Hurry" }
+			"Value": "{{Monsoon}}",
+			"When": { "Season": "Summer", "Weather": "kath.weathering_Monsoon" }
 		},
 		{
 			"Name": "DangerWeatherIndoorOutfits",
-			"Value": "{{Tropical Storm Indoor}}",
-			"When": { "Season": "Fall", "Weather": "kath.weathering_Hurry", "IsOutdoors": "false" }
+			"Value": "{{Monsoon Indoor}}",
+			"When": { "Season": "Summer", "Weather": "kath.weathering_Monsoon", "IsOutdoors": "false" }
 		},
 		{
 			"Name": "DangerWeatherOutfits",
@@ -3103,6 +3133,46 @@
 			"Name": "DangerWeatherIndoorOutfits",
 			"Value": "{{Blizzard Indoor}}",
 			"When": { "Season": "Winter", "Weather": "kath.weathering_Blizzard", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "DangerWeatherOutfits",
+			"Value": "{{Heavy Fog}}",
+			"When": { "Season": "Spring", "Weather": "kath.weathering_NoVis" }
+		},
+		{
+			"Name": "DangerWeatherIndoorOutfits",
+			"Value": "{{Heavy Fog Indoor}}",
+			"When": { "Season": "Spring", "Weather": "kath.weathering_NoVis", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "DangerWeatherOutfits",
+			"Value": "{{Heavy Fog}}",
+			"When": { "Season": "Summer", "Weather": "kath.weathering_NoVis" }
+		},
+		{
+			"Name": "DangerWeatherIndoorOutfits",
+			"Value": "{{Heavy Fog Indoor}}",
+			"When": { "Season": "Summer", "Weather": "kath.weathering_NoVis", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "DangerWeatherOutfits",
+			"Value": "{{Heavy Fog}}",
+			"When": { "Season": "Fall", "Weather": "kath.weathering_NoVis" }
+		},
+		{
+			"Name": "DangerWeatherIndoorOutfits",
+			"Value": "{{Heavy Fog Indoor}}",
+			"When": { "Season": "Fall", "Weather": "kath.weathering_NoVis", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "DangerWeatherOutfits",
+			"Value": "{{Heavy Fog}}",
+			"When": { "Season": "Winter", "Weather": "kath.weathering_NoVis" }
+		},
+		{
+			"Name": "DangerWeatherIndoorOutfits",
+			"Value": "{{Heavy Fog Indoor}}",
+			"When": { "Season": "Winter", "Weather": "kath.weathering_NoVis", "IsOutdoors": "false" }
 		},
 		
 		{
@@ -3302,7 +3372,7 @@
 		},
 		{
 			"Name": "WeatherWondersIndoorOutfits",
-			"Value": "{{Blizzard WInter Indoor}}",
+			"Value": "{{Blizzard Winter Indoor}}",
 			"When": { "Season": "Winter", "Weather": "Kana.WeatherWonders_Blizzard", "IsOutdoors": "false" }
 		},
 		{
@@ -3364,6 +3434,26 @@
 			"Name": "WeatherWondersIndoorOutfits",
 			"Value": "{{Acid Rain Summer Indoor}}",
 			"When": { "Season": "Summer", "Weather": "Kana.WeatherWonders_AcidRain", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "WeatherWondersOutfits",
+			"Value": "{{Sandstorm Spring}}",
+			"When": { "Season": "Spring", "Weather": "Kana.WeatherWonders_Sandstorm" }
+		},
+		{
+			"Name": "WeatherWondersIndoorOutfits",
+			"Value": "{{Sandstorm Spring Indoor}}",
+			"When": { "Season": "Spring", "Weather": "Kana.WeatherWonders_Sandstorm", "IsOutdoors": "false" }
+		},
+		{
+			"Name": "WeatherWondersOutfits",
+			"Value": "{{Sandstorm Summer}}",
+			"When": { "Season": "Summer", "Weather": "Kana.WeatherWonders_Sandstorm" }
+		},
+		{
+			"Name": "WeatherWondersIndoorOutfits",
+			"Value": "{{Sandstorm Summer Indoor}}",
+			"When": { "Season": "Summer", "Weather": "Kana.WeatherWonders_Sandstorm", "IsOutdoors": "false" }
 		},
 
 

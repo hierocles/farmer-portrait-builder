@@ -1,27 +1,11 @@
 import manifest from '../data/scenarioManifest.json'
+import { getDangerWeatherLegacySeason } from './dangerWeatherSeasons'
 import type { AppSettings, Assignment, Scenario, ScenarioManifest } from './types'
 import { getScenarioVisibleFiles, parseSlotKey, slotKey } from './types'
 
 const scenarioManifest = manifest as ScenarioManifest
 
 const SEASONS = ['Spring', 'Summer', 'Fall', 'Winter'] as const
-
-const DANGER_WEATHER_SEASONS: Record<string, string> = {
-  'kath.weathering_HeavyRain': 'Spring',
-  'kath.weathering_Meatball': 'Spring',
-  'kath.weathering_Locust': 'Spring',
-  'kath.weathering_Tornado': 'Spring',
-  'kath.weathering_HeatWave': 'Summer',
-  'kath.weathering_Wildfire': 'Summer',
-  'kath.weathering_DryLightning': 'Summer',
-  'kath.weathering_Sandstorm': 'Summer',
-  'kath.weathering_Hurry': 'Fall',
-  'kath.weathering_AcidRain': 'Fall',
-  'kath.weathering_MudRain': 'Fall',
-  'kath.weathering_Smog': 'Fall',
-  'kath.weathering_Hail': 'Winter',
-  'kath.weathering_Blizzard': 'Winter',
-}
 
 /** Old DangerWeather/{outfit-name}/ folders from pre-reorg portrait_cw.json */
 const DANGER_WEATHER_OUTFIT_FOLDERS: Record<string, string> = {
@@ -37,10 +21,16 @@ const DANGER_WEATHER_OUTFIT_FOLDERS: Record<string, string> = {
   Wildfire: 'Summer/kath.weathering_Wildfire',
   'Dry Lightning': 'Summer/kath.weathering_DryLightning',
   Sandstorm: 'Summer/kath.weathering_Sandstorm',
-  'Tropical Storm': 'Fall/kath.weathering_Hurry',
+  Monsoon: 'Summer/kath.weathering_Monsoon',
+  'Tropical Storm': 'Summer/kath.weathering_Monsoon',
   'Acid Rain': 'Fall/kath.weathering_AcidRain',
   'Mud Rain': 'Fall/kath.weathering_MudRain',
   Smog: 'Fall/kath.weathering_Smog',
+  'Heavy Fog': 'Spring/kath.weathering_NoVis',
+  'Heavy Fog Spring': 'Spring/kath.weathering_NoVis',
+  'Heavy Fog Summer': 'Summer/kath.weathering_NoVis',
+  'Heavy Fog Fall': 'Fall/kath.weathering_NoVis',
+  'Heavy Fog Winter': 'Winter/kath.weathering_NoVis',
   Hail: 'Winter/kath.weathering_Hail',
   Blizzard: 'Winter/kath.weathering_Blizzard',
 }
@@ -52,12 +42,15 @@ const WEATHER_WONDERS_OUTFIT_BASE: Record<string, string> = {
   'Dry Lightning': 'Kana.WeatherWonders_DryLightning',
   Hailstorm: 'Kana.WeatherWonders_Hailstorm',
   'Rain-Snow': 'Kana.WeatherWonders_RainSnowMix',
+  'Rain-Snow Mix': 'Kana.WeatherWonders_RainSnowMix',
+  Heatwave: 'Kana.WeatherWonders_Heatwave',
   Heatwaves: 'Kana.WeatherWonders_Heatwave',
   'Muddy Rain': 'Kana.WeatherWonders_MuddyRain',
   Blizzard: 'Kana.WeatherWonders_Blizzard',
   Cloudy: 'Kana.WeatherWonders_Cloudy',
   Mist: 'Kana.WeatherWonders_Mist',
   'Acid Rain': 'Kana.WeatherWonders_AcidRain',
+  Sandstorm: 'Kana.WeatherWonders_Sandstorm',
 }
 
 const FESTIVAL_FOLDER_ALIASES: Record<string, string> = {
@@ -164,11 +157,19 @@ export function migrateLegacyFolderPath(folderPath: string): string {
     if (migrated) return `${migrated}/`
   }
 
+  const dangerSeasonMatch = path.match(
+    /^DangerWeather\/(Spring|Summer|Fall|Winter)\/(kath\.weathering_[^/]+)\/$/i,
+  )
+  if (dangerSeasonMatch) {
+    const [, season, weatherId] = dangerSeasonMatch
+    return `${season}/${weatherId}/`
+  }
+
   const dangerOutfitMatch = path.match(/^DangerWeather\/([^/]+)\/$/i)
   if (dangerOutfitMatch) {
     const folder = dangerOutfitMatch[1]
     if (/^kath\.weathering_/i.test(folder)) {
-      const season = DANGER_WEATHER_SEASONS[folder]
+      const season = getDangerWeatherLegacySeason(folder)
       if (season) return `${season}/${folder}/`
     } else {
       const migrated = migrateDangerWeatherOutfitFolder(folder)

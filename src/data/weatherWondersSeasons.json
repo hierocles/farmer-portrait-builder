@@ -1,0 +1,14 @@
+{
+  "Kana.WeatherWonders_Blizzard": ["Winter"],
+  "Kana.WeatherWonders_Deluge": ["Spring", "Summer", "Fall"],
+  "Kana.WeatherWonders_Drizzle": ["Spring", "Summer", "Fall"],
+  "Kana.WeatherWonders_DryLightning": ["Spring", "Summer", "Fall", "Winter"],
+  "Kana.WeatherWonders_Hailstorm": ["Summer", "Fall"],
+  "Kana.WeatherWonders_Mist": ["Spring", "Fall"],
+  "Kana.WeatherWonders_RainSnowMix": ["Spring", "Fall", "Winter"],
+  "Kana.WeatherWonders_Heatwave": ["Spring", "Summer"],
+  "Kana.WeatherWonders_MuddyRain": ["Spring", "Summer"],
+  "Kana.WeatherWonders_Cloudy": ["Spring", "Fall"],
+  "Kana.WeatherWonders_AcidRain": ["Spring", "Summer"],
+  "Kana.WeatherWonders_Sandstorm": ["Spring", "Summer"]
+}
