@@ -19,6 +19,10 @@ import {
 import { migrateAssignmentKeys } from '../lib/exportPaths'
 import { parseProjectZip, type ImportProjectResult } from '../lib/importProject'
 import {
+  matchFilesToScenarioSlots,
+  unmatchedDroppedFilenames,
+} from '../lib/matchDroppedFiles'
+import {
   createPreviewUrl,
   revokePreviewUrl,
   resizeTo64,
@@ -59,6 +63,10 @@ interface PortraitState {
   clearPaletteEmotion: (emotionKey: EmotionKey) => void
   assignFromPalette: (emotionKey: EmotionKey, folderPath: string, filename: string) => Promise<void>
   assignCustomFile: (folderPath: string, filename: string, file: File) => Promise<void>
+  assignCustomFilesToScenario: (
+    scenario: Scenario,
+    files: File[],
+  ) => Promise<{ assigned: number; unmatched: string[] }>
   copyCustomAssignment: (
     fromFolderPath: string,
     fromFilename: string,
@@ -255,6 +263,45 @@ export const usePortraitStore = create<PortraitState>((set, get) => ({
     }))
 
     void savePersisted(get())
+  },
+
+  assignCustomFilesToScenario: async (scenario, files) => {
+    if (files.length === 0) return { assigned: 0, unmatched: [] }
+
+    const { settings } = get()
+    const visibleFiles = getScenarioVisibleFiles(scenario, settings)
+    const matches = matchFilesToScenarioSlots(files, visibleFiles)
+
+    if (matches.length === 0) {
+      return { assigned: 0, unmatched: files.map((file) => file.name) }
+    }
+
+    const nextAssignments = { ...get().assignments }
+
+    for (const { filename, file } of matches) {
+      const validation = await validatePngFile(file)
+      const blobId = await storeBlob(file)
+      const key = slotKey(scenario.folderPath, filename)
+      const emotionKey = emotionFromFilename(filename) ?? undefined
+      const existing = nextAssignments[key]
+
+      if (existing) void removeBlob(existing.blobId)
+
+      nextAssignments[key] = {
+        blobId,
+        source: 'custom',
+        emotionKey,
+        warning: validation.warning,
+      }
+    }
+
+    set({ assignments: nextAssignments })
+    void savePersisted(get())
+
+    return {
+      assigned: matches.length,
+      unmatched: unmatchedDroppedFilenames(files, matches),
+    }
   },
 
   copyCustomAssignment: async (fromFolderPath, fromFilename, toFolderPath, toFilename) => {
