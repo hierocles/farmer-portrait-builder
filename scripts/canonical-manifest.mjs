@@ -150,13 +150,11 @@ function buildSeasonWeatherScenarios() {
   for (const season of SEASONS) {
     for (const weather of SEASON_WEATHERS[season]) {
       const folderPath = `${season}/${weather}/`
-      const extraFiles = season === 'Winter' && weather === 'Wind' ? ['portrait_wind.png'] : []
       scenarios.push(
         makeScenario({
           folderPath,
           group: 'seasonWeather',
           hasIndoor: true,
-          extraFiles,
         }),
       )
     }

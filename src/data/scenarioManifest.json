@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-06-08T17:39:36.604Z",
+  "generatedAt": "2026-06-10T03:24:36.738Z",
   "groups": {
     "base": [
       {
@@ -433,8 +433,7 @@
           "portrait_happy_indoors.png",
           "portrait_indoors.png",
           "portrait_sad.png",
-          "portrait_sad_indoors.png",
-          "portrait_wind.png"
+          "portrait_sad_indoors.png"
         ],
         "group": "seasonWeather",
         "hasIndoor": true,
