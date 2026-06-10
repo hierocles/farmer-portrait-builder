@@ -27,9 +27,12 @@ function mergeSelection(current: Set<string>, keys: string[], selected: boolean)
 
 export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialogProps) {
   const settings = usePortraitStore((s) => s.settings)
+  const assignments = usePortraitStore((s) => s.assignments)
   const copyCustomAssignmentToTargets = usePortraitStore((s) => s.copyCustomAssignmentToTargets)
 
   const sourceKey = slotKey(folderPath, filename)
+  const sourceAssignment = assignments[sourceKey]
+  const isDefaultPortrait = sourceAssignment?.source === 'palette'
   const targetGroups = useMemo(
     () => getVisibleCopyTargetGroups(settings, sourceKey),
     [settings, sourceKey],
@@ -155,7 +158,7 @@ export function CopySlotDialog({ folderPath, filename, onClose }: CopySlotDialog
         aria-labelledby="copy-slot-dialog-title"
         onClick={(event) => event.stopPropagation()}>
         <h3 id="copy-slot-dialog-title" className="copy-slot-dialog__title">
-          Copy custom portrait
+          {isDefaultPortrait ? 'Copy default portrait' : 'Copy custom portrait'}
         </h3>
 
         <p className="copy-slot-dialog__source">
