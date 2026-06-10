@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useDndContext, useDroppable } from '@dnd-kit/core'
 
 import { slotKey, isIndoorFilename } from '../lib/types'
+import { isNativeFileDrag } from '../lib/nativeFileDrag'
 
 import { parseDimensionWarning } from '../lib/validateImage'
 
@@ -14,13 +15,11 @@ interface PortraitSlotProps {
   folderPath: string
 
   filename: string
+
+  onScenarioFilesDrop?: (files: File[]) => void
 }
 
-function isNativeFileDrag(event: React.DragEvent): boolean {
-  return event.dataTransfer.types.includes('Files')
-}
-
-export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
+export function PortraitSlot({ folderPath, filename, onScenarioFilesDrop }: PortraitSlotProps) {
   const key = slotKey(folderPath, filename)
 
   const assignment = usePortraitStore((s) => s.assignments[key])
@@ -76,9 +75,15 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
 
   const dimensionWarning = parseDimensionWarning(assignment?.warning)
 
+  const stopNativeFileDragBubble = (event: React.DragEvent) => {
+    if (!isNativeFileDrag(event)) return
+    event.stopPropagation()
+  }
+
   const handleFileDragEnter = (event: React.DragEvent) => {
     if (!isNativeFileDrag(event)) return
 
+    stopNativeFileDragBubble(event)
     fileDragDepthRef.current += 1
     setIsFileDragOver(true)
   }
@@ -86,6 +91,7 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
   const handleFileDragOver = (event: React.DragEvent) => {
     if (!isNativeFileDrag(event)) return
 
+    stopNativeFileDragBubble(event)
     event.preventDefault()
     event.dataTransfer.dropEffect = 'copy'
   }
@@ -93,6 +99,7 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
   const handleFileDragLeave = (event: React.DragEvent) => {
     if (!isNativeFileDrag(event)) return
 
+    stopNativeFileDragBubble(event)
     fileDragDepthRef.current -= 1
 
     if (fileDragDepthRef.current <= 0) {
@@ -104,13 +111,21 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
   const handleFileDrop = (event: React.DragEvent) => {
     if (!isNativeFileDrag(event)) return
 
+    stopNativeFileDragBubble(event)
     event.preventDefault()
     fileDragDepthRef.current = 0
     setIsFileDragOver(false)
 
-    const file = event.dataTransfer.files[0]
+    const files = Array.from(event.dataTransfer.files)
 
-    if (file) void assignCustomFile(folderPath, filename, file)
+    if (files.length === 0) return
+
+    if (files.length > 1 && onScenarioFilesDrop) {
+      onScenarioFilesDrop(files)
+      return
+    }
+
+    void assignCustomFile(folderPath, filename, files[0])
   }
 
   return (
