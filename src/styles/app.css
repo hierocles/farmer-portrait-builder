@@ -262,6 +262,21 @@ code {
   color: #2a5a7a;
 }
 
+.badge--dimension-warning {
+  background: #c62828;
+  color: #fff;
+  font-weight: 700;
+  min-width: 1.25rem;
+  padding: 0.12rem 0.35rem;
+  cursor: pointer;
+}
+
+button.badge {
+  font: inherit;
+  letter-spacing: inherit;
+  text-transform: inherit;
+}
+
 /* ---- Layout & meadow background ---- */
 
 .app {
@@ -1025,6 +1040,15 @@ code {
     0 0 0 2px var(--sdv-green);
 }
 
+.portrait-slot--file-over {
+  filter: brightness(1.12);
+  transform: scale(1.02);
+  box-shadow:
+    inset 2px 2px 0 var(--sdv-inset-shadow),
+    inset -2px -2px 0 var(--sdv-inset-hi),
+    0 0 0 2px var(--sdv-gold);
+}
+
 .portrait-slot--filled {
   box-shadow:
     inset 2px 2px 0 var(--sdv-inset-shadow),
@@ -1277,6 +1301,57 @@ code {
   padding: 0.35rem 0.65rem;
 }
 
+/* ---- Portrait dimension warning dialog ---- */
+
+.dimension-warning-dialog {
+  position: fixed;
+  inset: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  background: rgba(20, 12, 8, 0.55);
+}
+
+.dimension-warning-dialog__panel {
+  width: min(100%, 24rem);
+  padding: 1rem 1.1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.dimension-warning-dialog__title {
+  margin: 0;
+  font-family: var(--font-display);
+  font-size: 1rem;
+}
+
+.dimension-warning-dialog__message {
+  margin: 0;
+  font-size: 0.78rem;
+  line-height: 1.45;
+}
+
+.dimension-warning-dialog__hint {
+  margin: 0;
+  font-size: 0.72rem;
+  line-height: 1.45;
+  color: var(--sdv-ink-muted);
+}
+
+.dimension-warning-dialog__actions {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.dimension-warning-dialog__actions button {
+  min-width: 4.5rem;
+  font-size: 0.72rem;
+  padding: 0.35rem 0.65rem;
+}
+
 .drag-overlay {
   box-shadow:
     0 8px 24px rgba(0, 0, 0, 0.45),
@@ -1345,6 +1420,11 @@ code {
 .portrait-slot .badge--indoor {
   background: #c4d4c0;
   color: #3d5a48;
+}
+
+.portrait-slot .badge--dimension-warning {
+  min-width: 1.1rem;
+  padding: 0.12rem 0.3rem;
 }
 
 /* ---- Sticky scroll toolbar ---- */

@@ -4,13 +4,20 @@ import { useDndContext, useDroppable } from '@dnd-kit/core'
 
 import { slotKey, isIndoorFilename } from '../lib/types'
 
+import { parseDimensionWarning } from '../lib/validateImage'
+
 import { CopySlotDialog } from './CopySlotDialog'
+import { DimensionWarningTag } from './DimensionWarningTag'
 import { usePortraitStore } from '../store/portraitStore'
 
 interface PortraitSlotProps {
   folderPath: string
 
   filename: string
+}
+
+function isNativeFileDrag(event: React.DragEvent): boolean {
+  return event.dataTransfer.types.includes('Files')
 }
 
 export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
@@ -31,7 +38,11 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
 
   const inputRef = useRef<HTMLInputElement>(null)
 
+  const fileDragDepthRef = useRef(0)
+
   const [copyOpen, setCopyOpen] = useState(false)
+
+  const [isFileDragOver, setIsFileDragOver] = useState(false)
 
   const { active } = useDndContext()
 
@@ -63,10 +74,53 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
 
   const indoor = isIndoorFilename(filename)
 
+  const dimensionWarning = parseDimensionWarning(assignment?.warning)
+
+  const handleFileDragEnter = (event: React.DragEvent) => {
+    if (!isNativeFileDrag(event)) return
+
+    fileDragDepthRef.current += 1
+    setIsFileDragOver(true)
+  }
+
+  const handleFileDragOver = (event: React.DragEvent) => {
+    if (!isNativeFileDrag(event)) return
+
+    event.preventDefault()
+    event.dataTransfer.dropEffect = 'copy'
+  }
+
+  const handleFileDragLeave = (event: React.DragEvent) => {
+    if (!isNativeFileDrag(event)) return
+
+    fileDragDepthRef.current -= 1
+
+    if (fileDragDepthRef.current <= 0) {
+      fileDragDepthRef.current = 0
+      setIsFileDragOver(false)
+    }
+  }
+
+  const handleFileDrop = (event: React.DragEvent) => {
+    if (!isNativeFileDrag(event)) return
+
+    event.preventDefault()
+    fileDragDepthRef.current = 0
+    setIsFileDragOver(false)
+
+    const file = event.dataTransfer.files[0]
+
+    if (file) void assignCustomFile(folderPath, filename, file)
+  }
+
   return (
     <div
       ref={setNodeRef}
-      className={`portrait-slot sdv-wood-inset inventory-tile ${isOver ? 'portrait-slot--over' : ''} ${assignment ? 'portrait-slot--filled' : ''} ${isDragTarget ? 'portrait-slot--drag-target' : ''}`}>
+      className={`portrait-slot sdv-wood-inset inventory-tile ${isOver ? 'portrait-slot--over' : ''} ${isFileDragOver ? 'portrait-slot--file-over' : ''} ${assignment ? 'portrait-slot--filled' : ''} ${isDragTarget ? 'portrait-slot--drag-target' : ''}`}
+      onDragEnter={handleFileDragEnter}
+      onDragOver={handleFileDragOver}
+      onDragLeave={handleFileDragLeave}
+      onDrop={handleFileDrop}>
       <div className="portrait-slot__filename-row inventory-tile__filename-row">
         <code className="portrait-slot__filename">{filename}</code>
       </div>
@@ -80,7 +134,16 @@ export function PortraitSlot({ folderPath, filename }: PortraitSlotProps) {
           </span>
         )}
 
-        {assignment?.warning && <p className="warning">{assignment.warning}</p>}
+        {dimensionWarning && (
+          <DimensionWarningTag
+            width={dimensionWarning.width}
+            height={dimensionWarning.height}
+          />
+        )}
+
+        {assignment?.warning && !dimensionWarning && (
+          <p className="warning">{assignment.warning}</p>
+        )}
       </div>
 
       <div className="portrait-slot__thumb-row inventory-tile__thumb-row">

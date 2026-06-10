@@ -1,9 +1,11 @@
 import { useRef } from 'react'
 
 import { CORE_EMOTIONS, EXTENDED_EMOTIONS } from '../lib/types'
+import { parseDimensionWarning } from '../lib/validateImage'
 
 import { usePortraitStore } from '../store/portraitStore'
 
+import { DimensionWarningTag } from './DimensionWarningTag'
 import { DraggableEmotionChip } from './DraggableEmotionChip'
 
 export function EmotionPalette() {
@@ -79,6 +81,8 @@ function PaletteUploadRow({
 }: PaletteUploadRowProps) {
   const inputRef = useRef<HTMLInputElement>(null)
 
+  const dimensionWarning = parseDimensionWarning(entry?.warning)
+
   return (
     <div className="palette-upload sdv-wood-inset">
       <div className="palette-upload__info">
@@ -108,6 +112,13 @@ function PaletteUploadRow({
           </button>
         )}
 
+        {dimensionWarning && (
+          <DimensionWarningTag
+            width={dimensionWarning.width}
+            height={dimensionWarning.height}
+          />
+        )}
+
         <input
           ref={inputRef}
           type="file"
@@ -123,7 +134,7 @@ function PaletteUploadRow({
         />
       </div>
 
-      {entry?.warning && <p className="warning">{entry.warning}</p>}
+      {entry?.warning && !dimensionWarning && <p className="warning">{entry.warning}</p>}
     </div>
   )
 }
